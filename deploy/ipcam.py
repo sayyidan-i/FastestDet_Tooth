@@ -11,7 +11,7 @@ while True:
     img = cv2.imdecode(img_arr, -1) 
 
     # Mengurangi resolusi gambar
-    img = imutils.resize(img, width=500, height=900, inter=cv2.INTER_NEAREST) 
+    img = imutils.resize(img, width=325, height=325, inter=cv2.INTER_NEAREST) 
     cv2.imshow("Android_cam", img) 
   
     if cv2.waitKey(1) == 27: 
