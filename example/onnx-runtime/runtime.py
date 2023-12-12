@@ -113,36 +113,102 @@ def detection(session, img, input_width, input_height, thresh):
     return nms(np.array(pred))
 
 if __name__ == '__main__':
-    # 读取图片
-    img = cv2.imread("3.jpg")
+    # source
+    source = "karies.png"
+    model_onnx = 'epoch230.onnx'
+    label = "tooth.names"
+    thresh = 0.7
+    
+    img = cv2.imread(source)
     # 模型输入的宽高
     input_width, input_height = 352, 352
     # 加载模型
-    session = onnxruntime.InferenceSession('FastestDet.onnx')
+    session = onnxruntime.InferenceSession(model_onnx)
     # 目标检测
     start = time.perf_counter()
-    bboxes = detection(session, img, input_width, input_height, 0.65)
+    bboxes = detection(session, img, input_width, input_height, thresh)
     end = time.perf_counter()
     time = (end - start) * 1000.
     print("forward time:%fms"%time)
 
     # 加载label names
     names = []
-    with open("coco.names", 'r') as f:
+    with open(label, 'r') as f:
 	    for line in f.readlines():
 	        names.append(line.strip())
             
+    # Inisialisasi warna untuk setiap label
+    label_colors = {
+        "Normal": (0, 255, 0),         
+        "Karies kecil": (0, 0, 255),   
+        "Karies sedang": (0, 0, 130),  
+        "Karies besar": (0, 0, 50), 
+        "Stain": (255, 0, 255),        
+        "Karang gigi": (0, 255, 255),  
+        "Lain-Lain": (128, 128, 128) 
+    }
+
     print("=================box info===================")
-    for b in bboxes:
+    for i, b in enumerate(bboxes):
         print(b)
         obj_score, cls_index = b[4], int(b[5])
         x1, y1, x2, y2 = int(b[0]), int(b[1]), int(b[2]), int(b[3])
+        label = names[cls_index]
 
-        #绘制检测框
-        cv2.rectangle(img, (x1,y1), (x2, y2), (255, 255, 0), 2)
-        cv2.putText(img, '%.2f' % obj_score, (x1, y1 - 5), 0, 0.7, (0, 255, 0), 2)
-        cv2.putText(img, names[cls_index], (x1, y1 - 25), 0, 0.7, (0, 255, 0), 2)
-	
-    cv2.imwrite("result.jpg", img)
+        # Mengambil warna sesuai dengan label
+        color = label_colors.get(label, (255, 255, 255))  # Jika label tidak ditemukan, gunakan putih
+
+        # Memodifikasi deteksi untuk menggunakan warna yang ditentukan
+        cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
+
+        # Menentukan koordinat teks label
+        text_y = y1 - 5 if y1 >= 5 else y1 + 20  # Menggeser teks ke bawah jika dekat batas atas
+        if y1 < img.shape[0] // 2:  # Jika objek berada di bagian atas gambar
+            text_y = y2 + 20  # Tempatkan teks di bawah objek
+        else:  # Jika objek berada di bagian bawah gambar
+            text_y = y1 - 5 - 20  # Tempatkan teks di atas objek
+
+        cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.7, color, 2)
+        #cv2.putText(img, label, (x1, text_y - 20), 0, 0.7, color, 2)
+
+    #cv2.imwrite("result.jpg", img)
+    
+    # Inisialisasi ukuran gambar legenda
+    legend_height = 200  # Ubah sesuai kebutuhan
+    legend_width = 200   # Ubah sesuai kebutuhan
+    legend = np.zeros((legend_height, legend_width, 4), dtype=np.uint8)  # Tambahkan 4 channel untuk alpha (RGBA)
+
+    # Menggambar legenda untuk setiap label dengan latar belakang transparan
+    legend_start_y = 20
+    for i, label in enumerate(label_colors):
+        color = label_colors[label]
+        # Menambahkan latar belakang label dengan transparansi (alpha)
+        cv2.rectangle(legend, (10, legend_start_y), (30, legend_start_y + 20), (*color, 125), -1)
+        cv2.putText(legend, label, (40, legend_start_y + 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255, 255), 1)
+        legend_start_y += 25
+
+    # Menggabungkan legenda ke dalam gambar
+    combined_img = img.copy()  # Salin gambar asli untuk menggabungkan legenda
+
+    # Menentukan koordinat untuk sudut kiri bawah
+    x_offset, y_offset = 10, combined_img.shape[0] - legend_height - 10
+
+    # Mengatur latar belakang legenda menjadi transparan
+    legend_alpha = legend[:, :, 3] / 255.0  # Mengambil channel alpha sebagai nilai transparansi antara 0 dan 1
+
+    # Menyesuaikan nilai piksel dalam gambar asli sesuai dengan transparansi legenda
+    for c in range(0, 3):
+        combined_img[y_offset:y_offset+legend_height, x_offset:x_offset+legend_width, c] = (
+            legend_alpha * legend[:, :, c] + (1.0 - legend_alpha) * combined_img[y_offset:y_offset+legend_height, x_offset:x_offset+legend_width, c]
+        )
+
+    cv2.imwrite("result_detection.png", combined_img)
+
+
+
+
+
+
+
 
 
