@@ -196,36 +196,6 @@ if __name__ == '__main__':
         cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.7, color, 2)
         cv2.putText(img, label, (x1, text_y - 20), 0, 0.7, color, 2)
 
-    '''
-    # Inisialisasi ukuran gambar legenda
-    legend_height = 200  # Ubah sesuai kebutuhan
-    legend_width = 200   # Ubah sesuai kebutuhan
-    legend = np.zeros((legend_height, legend_width, 4), dtype=np.uint8)  # Tambahkan 4 channel untuk alpha (RGBA)
-
-    # Menggambar legenda untuk setiap label dengan latar belakang transparan
-    legend_start_y = 20
-    for i, label in enumerate(label_colors):
-        color = label_colors[label]
-        # Menambahkan latar belakang label dengan transparansi (alpha)
-        cv2.rectangle(legend, (10, legend_start_y), (30, legend_start_y + 20), (*color, 125), -1)
-        cv2.putText(legend, label, (40, legend_start_y + 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255, 255), 1)
-        legend_start_y += 25
-
-    # Menggabungkan legenda ke dalam gambar
-    combined_img = img.copy()  # Salin gambar asli untuk menggabungkan legenda
-
-    # Menentukan koordinat untuk sudut kiri bawah
-    x_offset, y_offset = 10, combined_img.shape[0] - legend_height - 10
-
-    # Mengatur latar belakang legenda menjadi transparan
-    legend_alpha = legend[:, :, 3] / 255.0  # Mengambil channel alpha sebagai nilai transparansi antara 0 dan 1
-
-    # Menyesuaikan nilai piksel dalam gambar asli sesuai dengan transparansi legenda
-    #for c in range(0, 3):
-        #combined_img[y_offset:y_offset+legend_height, x_offset:x_offset+legend_width, c] = (
-            #legend_alpha * legend[:, :, c] + (1.0 - legend_alpha) * combined_img[y_offset:y_offset+legend_height, x_offset:x_offset+legend_width, c]
-        #)
-'''
     cv2.imwrite(f"result_{source}", img)
     display_image(f"result_{source}")
     
