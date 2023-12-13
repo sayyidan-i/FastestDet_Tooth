@@ -64,7 +64,7 @@ def nms(dets, thresh=0.45):
 
     return output
 
-# Face detection
+
 def detection(session, img, input_width, input_height, thresh):
     pred = []
 
@@ -114,6 +114,12 @@ def detection(session, img, input_width, input_height, thresh):
     if len(pred)>0:
         return nms(np.array(pred))
 
+def capture_image(img):
+    global image_counter
+    img_name = f"result/captured_image_{image_counter}.jpg"
+    cv2.imwrite(img_name, img)
+    image_counter += 1
+
 if __name__ == '__main__':
     
     #find fps
@@ -155,6 +161,9 @@ if __name__ == '__main__':
     
     session = onnxruntime.InferenceSession(model_onnx)
     
+    #buat save gambar
+    image_counter = 0
+           
     while True:
         ret, img = source.read()
        
@@ -202,7 +211,10 @@ if __name__ == '__main__':
         # Display the image
         cv2.imshow(window_name, img_resized)
 
+        
         if cv2.waitKey(1) == 27:
             break
+        elif cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
+            capture_image(img_resized)  
 
     cv2.destroyAllWindows()
