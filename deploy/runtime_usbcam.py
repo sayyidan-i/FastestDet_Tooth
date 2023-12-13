@@ -133,8 +133,8 @@ if __name__ == '__main__':
     thresh = 0.5
     
     #OpenCV window
-    window_width = 800
-    window_height = 600
+    #window_width = 800
+   # indow_height = 600
     window_name = "usb_cam"
     cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 
@@ -157,7 +157,9 @@ if __name__ == '__main__':
 
     
     # Adjust OpenCV window size
-    cv2.resizeWindow(window_name, window_width, window_height)
+    #cv2.resizeWindow(window_name, window_width, window_height)
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+
     
     session = onnxruntime.InferenceSession(model_onnx)
     
@@ -211,10 +213,10 @@ if __name__ == '__main__':
         # Display the image
         cv2.imshow(window_name, img_resized)
 
-        
-        if cv2.waitKey(1) == 27:
-            break
-        elif cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
+        if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
             capture_image(img_resized)  
+        elif cv2.waitKey(1) == 27:
+            break
+        
 
     cv2.destroyAllWindows()
