@@ -121,14 +121,16 @@ if __name__ == '__main__':
     new_frame_tie = 0
         
     # source
-    source = "http://192.168.100.17:8080/shot.jpg"
+    source = cv2.VideoCapture(0)
     model_onnx = 'epoch230.onnx'
     label = "tooth.names"
     thresh = 0.5
-    # Initialize OpenCV window size
+    
+    #OpenCV window
     window_width = 800
     window_height = 600
-    cv2.namedWindow("Android_cam", cv2.WINDOW_NORMAL)  # Specify the window type to adjust size
+    window_name = "usb_cam"
+    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 
     # Load label names
     names = []
@@ -149,7 +151,7 @@ if __name__ == '__main__':
 
     
     # Adjust OpenCV window size
-    cv2.resizeWindow("Android_cam", window_width, window_height)
+    cv2.resizeWindow(window_name, window_width, window_height)
     
     session = onnxruntime.InferenceSession(model_onnx)
     
@@ -200,7 +202,7 @@ if __name__ == '__main__':
         cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
 
         # Display the image
-        cv2.imshow("Android_cam", img_resized)
+        cv2.imshow(window_name, img_resized)
 
         if cv2.waitKey(1) == 27:
             break
