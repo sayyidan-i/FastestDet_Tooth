@@ -156,10 +156,8 @@ if __name__ == '__main__':
     session = onnxruntime.InferenceSession(model_onnx)
     
     while True:
-        img_resp = requests.get(source)
-        img_arr = np.array(bytearray(img_resp.content), dtype=np.uint8)
-        img = cv2.imdecode(img_arr, -1)
-        
+        ret, img = source.read()
+       
         # Resize image without changing resolution
         img_resized = imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
         
