@@ -158,8 +158,8 @@ if __name__ == '__main__':
     
     # Adjust OpenCV window size
     #cv2.resizeWindow(window_name, window_width, window_height)
-    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
-
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+    #cv2.setWindowProperty(window_name, 800, 800)
     
     session = onnxruntime.InferenceSession(model_onnx)
     
@@ -170,7 +170,7 @@ if __name__ == '__main__':
         ret, img = source.read()
        
         # Resize image without changing resolution
-        img_resized = imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        img_resized =  img #imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
         
         input_width, input_height = 352, 352
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
@@ -215,7 +215,8 @@ if __name__ == '__main__':
 
         if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
             capture_image(img_resized)  
-        elif cv2.waitKey(1) == 27:
+        
+        if cv2.waitKey(1) == 27:
             break
         
 
