@@ -64,7 +64,7 @@ def nms(dets, thresh=0.45):
 
     return output
 
-# Face detection
+
 def detection(session, img, input_width, input_height, thresh):
     pred = []
 
@@ -114,21 +114,29 @@ def detection(session, img, input_width, input_height, thresh):
     if len(pred)>0:
         return nms(np.array(pred))
 
+def capture_image(img):
+    global image_counter
+    img_name = f"result/captured_image_{image_counter}.jpg"
+    cv2.imwrite(img_name, img)
+    image_counter += 1
+
 if __name__ == '__main__':
     
     #find fps
     prev_frame_time = 0
-    new_frame_tie = 0
+    new_frame_time = 0
         
     # source
-    source = "http://192.168.1.9:8080/shot.jpg"
+    source = cv2.VideoCapture(0)
     model_onnx = 'epoch230.onnx'
     label = "tooth.names"
     thresh = 0.5
-    # Initialize OpenCV window size
-    window_width = 800
-    window_height = 600
-    cv2.namedWindow("Android_cam", cv2.WINDOW_NORMAL)  # Specify the window type to adjust size
+    
+    #OpenCV window
+    #window_width = 800
+   # indow_height = 600
+    window_name = "usb_cam"
+    #cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 
     # Load label names
     names = []
@@ -149,25 +157,30 @@ if __name__ == '__main__':
 
     
     # Adjust OpenCV window size
-    cv2.resizeWindow("Android_cam", window_width, window_height)
+    #cv2.resizeWindow(window_name, window_width, window_height)
+    #cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+    #cv2.setWindowProperty(window_name, 800, 800)
     
     session = onnxruntime.InferenceSession(model_onnx)
     
+    #buat save gambar
+    image_counter = 0
+           
     while True:
-        img_resp = requests.get(source)
-        img_arr = np.array(bytearray(img_resp.content), dtype=np.uint8)
-        img = cv2.imdecode(img_arr, -1)
-        
+        ret, img = source.read()
+       
         # Resize image without changing resolution
-        img_resized = imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        img_resized =  img #imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
+
         
         input_width, input_height = 352, 352
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
 
         if bboxes is not None:
-            print("=================box info===================")
+            #print("=================box info===================")
             for i, b in enumerate(bboxes):
-                print(b)
+                #print(b)
                 obj_score, cls_index = b[4], int(b[5])
                 x1, y1, x2, y2 = int(b[0]), int(b[1]), int(b[2]), int(b[3])
                 label = names[cls_index]
@@ -198,11 +211,16 @@ if __name__ == '__main__':
 
         # Display FPS on the screen
         cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        print(f"FPS: {fps}")
 
         # Display the image
-        cv2.imshow("Android_cam", img_resized)
+        #cv2.imshow(window_name, img_resized)
 
+        if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
+            capture_image(img_resized)  
+        
         if cv2.waitKey(1) == 27:
             break
+        
 
     cv2.destroyAllWindows()

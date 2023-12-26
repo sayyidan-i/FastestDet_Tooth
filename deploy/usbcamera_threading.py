@@ -4,6 +4,7 @@ import numpy as np
 import onnxruntime
 import requests
 import imutils
+import threading
 
 # sigmoid function
 def sigmoid(x):
@@ -20,6 +21,13 @@ def preprocess(src_img, size):
     output = output.reshape((1, 3, size[1], size[0])) / 255
 
     return output.astype('float32')
+
+# Fungsi untuk memproses gambar secara asinkron
+def process_frame():
+    global img, source
+    while True:
+        ret, img = source.read()
+        time.sleep(0.01)  # Untuk mengatur kecepatan pemrosesan gambar
 
 # nms algorithm
 def nms(dets, thresh=0.45):
@@ -64,7 +72,7 @@ def nms(dets, thresh=0.45):
 
     return output
 
-# Face detection
+
 def detection(session, img, input_width, input_height, thresh):
     pred = []
 
@@ -114,21 +122,34 @@ def detection(session, img, input_width, input_height, thresh):
     if len(pred)>0:
         return nms(np.array(pred))
 
+def capture_image(img):
+    global image_counter
+    img_name = f"result/captured_image_{image_counter}.jpg"
+    cv2.imwrite(img_name, img)
+    image_counter += 1
+
 if __name__ == '__main__':
     
     #find fps
     prev_frame_time = 0
-    new_frame_tie = 0
-        
+    new_frame_time = 0
+       
     # source
-    source = "http://192.168.1.9:8080/shot.jpg"
+    source = cv2.VideoCapture(0)
     model_onnx = 'epoch230.onnx'
     label = "tooth.names"
     thresh = 0.5
-    # Initialize OpenCV window size
-    window_width = 800
-    window_height = 600
-    cv2.namedWindow("Android_cam", cv2.WINDOW_NORMAL)  # Specify the window type to adjust size
+    
+    # Start thread untuk memproses frame secara asinkron
+    thread = threading.Thread(target=process_frame)
+    thread.daemon = True
+    thread.start()
+    
+    #OpenCV window
+    #window_width = 800
+   # indow_height = 600
+    window_name = "usb_cam"
+    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 
     # Load label names
     names = []
@@ -149,25 +170,30 @@ if __name__ == '__main__':
 
     
     # Adjust OpenCV window size
-    cv2.resizeWindow("Android_cam", window_width, window_height)
+    #cv2.resizeWindow(window_name, window_width, window_height)
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
+    #cv2.setWindowProperty(window_name, 800, 800)
     
     session = onnxruntime.InferenceSession(model_onnx)
     
+    #buat save gambar
+    image_counter = 0
+           
     while True:
-        img_resp = requests.get(source)
-        img_arr = np.array(bytearray(img_resp.content), dtype=np.uint8)
-        img = cv2.imdecode(img_arr, -1)
-        
+        ret, img = source.read()
+       
         # Resize image without changing resolution
-        img_resized = imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        #img_resized =  img #imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
+
         
         input_width, input_height = 352, 352
-        bboxes = detection(session, img_resized, input_width, input_height, thresh)
+        bboxes = detection(session, img, input_width, input_height, thresh)
 
         if bboxes is not None:
-            print("=================box info===================")
+            #print("=================box info===================")
             for i, b in enumerate(bboxes):
-                print(b)
+                #print(b)
                 obj_score, cls_index = b[4], int(b[5])
                 x1, y1, x2, y2 = int(b[0]), int(b[1]), int(b[2]), int(b[3])
                 label = names[cls_index]
@@ -176,19 +202,19 @@ if __name__ == '__main__':
                 color = label_colors.get(label, (255, 255, 255))  # Use white if label not found
 
                 # Modify detection to use the specified color
-                cv2.rectangle(img_resized, (x1, y1), (x2, y2), color, 2)
+                cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
 
                 # Determine text label coordinates
                 text_y = y1 - 5 if y1 >= 5 else y1 + 20  # Shift text downwards if close to top boundary
-                if y1 < img_resized.shape[0] // 2:  # If the object is in the upper part of the image
+                if y1 < img.shape[0] // 2:  # If the object is in the upper part of the image
                     text_y = y2 + 20  # Place the text below the object
                 else:  # If the object is in the lower part of the image
                     text_y = y1 - 5 - 20  # Place the text above the object
 
-                cv2.putText(img_resized, '%.2f' % obj_score, (x1, text_y), 0, 0.5, color, 1)
-                cv2.putText(img_resized, label, (x1, text_y - 20), 0, 0.5, color, 1)
+                cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.5, color, 1)
+                cv2.putText(img, label, (x1, text_y - 20), 0, 0.5, color, 1)
         else:
-            cv2.putText(img_resized, "Correct the camera direction", (550,430), 0, 0.5, (0, 255, 255), 1)
+            cv2.putText(img, "Correct the camera direction", (550,430), 0, 0.5, (0, 255, 255), 1)
         
         # Calculate FPS
         new_frame_time = time.time()
@@ -197,12 +223,19 @@ if __name__ == '__main__':
         fps = str(int(fps))
 
         # Display FPS on the screen
-        cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        cv2.putText(img, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        print(f"FPS: {fps}")
 
         # Display the image
-        cv2.imshow("Android_cam", img_resized)
+        #img = cv2.resize(img, (200, 200))  # Ubah ukuran gambar
+        cv2.imshow(window_name, img)  # Tampilkan gambar yang sudah diubah ukurannya
 
+
+        if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
+            capture_image(img)  
+        
         if cv2.waitKey(1) == 27:
             break
+        
 
     cv2.destroyAllWindows()

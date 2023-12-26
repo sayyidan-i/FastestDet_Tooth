@@ -124,7 +124,7 @@ if __name__ == '__main__':
     
     #find fps
     prev_frame_time = 0
-    new_frame_tie = 0
+    new_frame_time = 0
         
     # source
     source = cv2.VideoCapture(0)
@@ -171,6 +171,8 @@ if __name__ == '__main__':
        
         # Resize image without changing resolution
         img_resized =  img #imutils.resize(img, width=800, height=800, inter=cv2.INTER_NEAREST)
+        #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
+
         
         input_width, input_height = 352, 352
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
@@ -209,6 +211,7 @@ if __name__ == '__main__':
 
         # Display FPS on the screen
         cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        print(f"FPS: {fps}")
 
         # Display the image
         cv2.imshow(window_name, img_resized)
