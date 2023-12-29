@@ -70,7 +70,7 @@ int nmsHandle(std::vector<TargetBox> &src_boxes, std::vector<TargetBox> &dst_box
             float union_area = src_boxes[i].area() + src_boxes[picked[j]].area() - inter_area;
             float IoU = inter_area / union_area;
 
-            if(IoU > 0.45 && src_boxes[i].category == src_boxes[picked[j]].category) 
+            if(IoU > 0.2 && src_boxes[i].category == src_boxes[picked[j]].category) 
             {
                 keep = 0;
                 break;
@@ -113,7 +113,7 @@ int main()
     printf("ncnn model load sucess...\n");
 
     // 加载图片
-    cv::Mat img = cv::imread("foto1289-3199.jpg");
+    cv::Mat img = cv::imread("karies-gigi.jpg");
     int img_width = img.cols;
     int img_height = img.rows;
 
@@ -127,7 +127,7 @@ int main()
 
     // creat extractor
     ncnn::Extractor ex = net.create_extractor();
-    ex.set_num_threads(1);
+    ex.set_num_threads(4);
 
     double start = ncnn::get_current_time();
     //set input tensor
@@ -211,7 +211,7 @@ int main()
         cv::putText(img, class_names[box.category], cv::Point(box.x1, box.y1), cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0, 255, 0), 2);
     }
     
-    cv::imwrite("result.jpg", img);
+    cv::imwrite("karies_result.jpg", img);
     
     return 0;
 }
