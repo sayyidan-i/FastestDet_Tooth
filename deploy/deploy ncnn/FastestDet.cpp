@@ -108,8 +108,8 @@ int main()
 
     // 加载模型
     ncnn::Net net;
-    net.load_param("epoch230-sim-opt-fp16.param");
-    net.load_model("epoch230-sim-opt-fp16.bin");  
+    net.load_param("epoch230-sim-opt.param");
+    net.load_model("epoch230-sim-opt.bin");  
     printf("ncnn model load sucess...\n");
 
     // 加载图片
@@ -201,15 +201,33 @@ int main()
     double time = end - start;
     printf("Time:%7.2f ms\n",time);
 
-    // draw result
-    for (size_t i = 0; i < nms_boxes.size(); i++)
-    {
-        TargetBox box = nms_boxes[i];
-        printf("x1:%d y1:%d x2:%d y2:%d  %s:%.2f%%\n", box.x1, box.y1, box.x2, box.y2, class_names[box.category], box.score * 100);
+// Buat pemetaan antara kelas dan warna
+std::map<std::string, cv::Scalar> color_map = {
+    {"Normal", cv::Scalar(0, 255, 0)},      // Hijau
+    {"Karies kecil", cv::Scalar(0, 255, 255)}, // Kuning
+    {"Karies sedang", cv::Scalar(255, 0, 0)}, // Biru
+    {"Karies besar", cv::Scalar(0, 0, 255)},  // Merah
+    {"Stain", cv::Scalar(128, 0, 128)},      // Ungu
+    {"Karang gigi", cv::Scalar(255, 192, 203)}, // Pink
+    {"Lain-Lain", cv::Scalar(128, 128, 128)}  // Abu-abu
+};
 
-        cv::rectangle(img, cv::Point(box.x1, box.y1), cv::Point(box.x2, box.y2), cv::Scalar(0, 0, 255), 2);
-        cv::putText(img, class_names[box.category], cv::Point(box.x1, box.y1), cv::FONT_HERSHEY_SIMPLEX, 0.75, cv::Scalar(0, 255, 0), 2);
-    }
+// draw result
+for (size_t i = 0; i < nms_boxes.size(); i++)
+{
+    TargetBox box = nms_boxes[i];
+    printf("x1:%d y1:%d x2:%d y2:%d  %s:%.2f%%\n", box.x1, box.y1, box.x2, box.y2, class_names[box.category], box.score * 100);
+
+    std::stringstream stream;
+    stream << std::fixed << std::setprecision(2) << box.score * 100;
+    std::string text = std::string(class_names[box.category]) + ":" + stream.str() + "%";
+
+
+    cv::rectangle(img, cv::Point(box.x1, box.y1), cv::Point(box.x2, box.y2), color_map[class_names[box.category]], 2);
+    cv::putText(img, text, cv::Point(box.x1, box.y1), cv::FONT_HERSHEY_SIMPLEX, 0.75, color_map[class_names[box.category]], 2);
+}
+
+
     
     cv::imwrite("karies_result.jpg", img);
     
