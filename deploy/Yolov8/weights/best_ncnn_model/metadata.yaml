@@ -1,0 +1,19 @@
+description: Ultralytics best model trained on /content/gdrive/Othercomputers/My laptop/Dataset/saos_data.yaml
+author: Ultralytics
+license: AGPL-3.0 https://ultralytics.com/license
+date: '2024-01-06T01:15:16.952783'
+version: 8.0.235
+stride: 32
+task: detect
+batch: 1
+imgsz:
+- 640
+- 640
+names:
+  0: Normal
+  1: Karies kecil
+  2: Karies sedang
+  3: Karies besar
+  4: Stain
+  5: Karang gigi
+  6: Lain-Lain
