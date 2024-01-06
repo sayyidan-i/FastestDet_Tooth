@@ -107,7 +107,7 @@ def export(args):
     import torch  # noqa
     import onnxsim  # noqa
 
-    filename = './weights/best.pt'
+    filename = './weights/yolov8_640.pt'
 
     model = torch.load(filename,map_location=torch.device('cpu'))['model'].float()
     image = torch.zeros((1, 3, args.input_size, args.input_size))
@@ -115,12 +115,9 @@ def export(args):
     torch.onnx.export(model,
                       image,
                       filename.replace('pt', 'onnx'),
-                      verbose=False,
-                      opset_version=12,
-                      do_constant_folding=True,
-                      input_names=['inputs'],
-                      output_names=['outputs'],
-                      dynamic_axes=None)
+                      export_params=True,        # store the trained parameter weights inside the model file
+                          opset_version=11,          # the ONNX version to export the model to
+                          do_constant_folding=True)
 
     # Checks
     model_onnx = onnx.load(filename.replace('pt', 'onnx'))  # load onnx model
