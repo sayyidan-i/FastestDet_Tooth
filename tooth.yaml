@@ -1,0 +1,18 @@
+DATASET:
+  TRAIN: "../Dataset/Yolo/train_lokal.txt"
+  VAL: "../Dataset/Yolo/val_lokal.txt"
+  NAMES: "tooth.names"
+MODEL:
+  NC: 7
+  INPUT_WIDTH: 160
+  INPUT_HEIGHT: 160
+TRAIN:
+  LR: 0.001
+  THRESH: 0.25
+  WARMUP: true
+  BATCH_SIZE: 96
+  END_EPOCH: 10
+  MILESTIONES:
+    - 100
+    - 200
+    - 250

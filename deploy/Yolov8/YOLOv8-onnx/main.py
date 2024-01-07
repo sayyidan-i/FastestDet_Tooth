@@ -136,7 +136,7 @@ def test(args):
     # Load model
     model = ONNXDetect(args, onnx_path='./weights/best.onnx')
 
-    frame = cv2.imread('karang gigi.jpg')
+    frame = cv2.imread('karies gigi.jpg')
     image = frame.copy()
     outputs = model(image)
     for output in outputs:
@@ -147,7 +147,7 @@ def test(args):
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--input-size', default=640, type=int)
+    parser.add_argument('--input-size', default=160, type=int)
     parser.add_argument('--export', action='store_true')
     parser.add_argument('--test', action='store_true')
 

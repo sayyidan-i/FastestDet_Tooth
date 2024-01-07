@@ -118,7 +118,9 @@ def test(args):
     }
 
     # Load model
-    model = ONNXDetect(args, onnx_path='yolov8_640.onnx')
+    #model = ONNXDetect(args, onnx_path='yolov8_352.onnx')
+    model = ONNXDetect(args, onnx_path='yolov8_160.onnx')
+    #model = ONNXDetect(args, onnx_path='best_352.onnx')
 
     source = cv2.VideoCapture(0)  # Live camera source
     if not source.isOpened():
@@ -181,7 +183,7 @@ def test(args):
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--input-size', default=640, type=int)
+    parser.add_argument('--input-size', default=160, type=int)
 
     args = parser.parse_args()
 
