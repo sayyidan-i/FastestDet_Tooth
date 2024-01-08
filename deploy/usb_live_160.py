@@ -128,7 +128,7 @@ if __name__ == '__main__':
         
     # source
     source = cv2.VideoCapture(0)
-    model_onnx = 'epoch230_160.onnx'
+    model_onnx = 'FastestDet_160_epoch10.onnx'
     label = "tooth.names"
     thresh = 0.5
     

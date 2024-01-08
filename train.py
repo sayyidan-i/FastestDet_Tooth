@@ -119,12 +119,12 @@ class FastestDet:
                 batch_num += 1
 
             # 模型验证及保存
-            if epoch % 10 == 0 and epoch > 0:
+            if epoch % 5 == 0 and epoch > 0:
                 # 模型评估
                 self.model.eval()
                 print("computer mAP...")
                 mAP05 = self.evaluation.compute_map(self.val_dataloader, self.model)
-                torch.save(self.model.state_dict(), "checkpoint/weight_AP05:%f_%d-epoch.pth"%(mAP05, epoch))
+                torch.save(self.model.state_dict(), "/content/gdrive/Othercomputers/My laptop/skripsi/FastestDet_Tooth_Private/checkpoint/weight_AP05:%f_%d-epoch.pth"%(mAP05, epoch))
 
             # 学习率调整
             self.scheduler.step()
