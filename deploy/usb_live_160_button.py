@@ -117,13 +117,14 @@ def detection(session, img, input_width, input_height, thresh):
 
 def mouse_click(event,x,y,flags,param):
     global loop
-    if event == cv2.EVENT_LBUTTONDBLCLK:
+    if event == cv2.EVENT_LBUTTONDOWN:
         global image_counter
         img_name = f"result/captured_image_{image_counter}.jpg"
         cv2.imwrite(img_name, img)
         image_counter += 1
  
-    elif event == cv2.EVENT_RBUTTONDOWN:
+    #elif event == cv2.EVENT_RBUTTONDOWN:
+    elif event == cv2.EVENT_LBUTTONDBLCLK:
         loop=False
 
 if __name__ == '__main__':
@@ -134,7 +135,7 @@ if __name__ == '__main__':
     new_frame_time = 0
         
     # source
-    source = cv2.VideoCapture(0)
+    source = cv2.VideoCapture(1)
     model_onnx = 'FastestDet_160_AP2.6.onnx'
     label = "tooth.names"
     thresh = 0.5
