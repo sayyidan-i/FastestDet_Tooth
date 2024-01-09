@@ -128,7 +128,7 @@ if __name__ == '__main__':
         
     # source
     source = cv2.VideoCapture(0)
-    model_onnx = 'FastestDet_160_epoch10.onnx'
+    model_onnx = 'FastestDet_160_AP2.6.onnx'
     label = "tooth.names"
     thresh = 0.5
     
@@ -170,7 +170,8 @@ if __name__ == '__main__':
         ret, img = source.read()
        
         # Resize image without changing resolution
-        img_resized =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
+        img_resized = img
+        #img_resized =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
         #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
 
         

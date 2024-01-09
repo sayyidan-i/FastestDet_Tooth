@@ -113,4 +113,4 @@ if __name__ == '__main__':
         cv2.putText(ori_img, '%.2f' % obj_score, (x1, y1 - 5), 0, 0.7, (0, 255, 0), 2)	
         cv2.putText(ori_img, category, (x1, y1 - 25), 0, 0.7, (0, 255, 0), 2)
 
-    cv2.imwrite("result.png", ori_img)
+    cv2.imwrite("karies.png", ori_img)
