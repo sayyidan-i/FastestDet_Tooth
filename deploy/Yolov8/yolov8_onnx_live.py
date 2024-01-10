@@ -117,12 +117,12 @@ if __name__ == "__main__":
         "lain-lain": (128, 128, 128)    # Lain-Lain - Gray
     }
     
-    input_size = 352
+    input_size = 160
 
     # Load model
-    model = ONNXDetect(onnx_path='weights/yolov8_352.onnx')
+    model = ONNXDetect(onnx_path='weights/yolov8_160.onnx')
 
-    source = cv2.VideoCapture(0)  # Live camera source
+    source = cv2.VideoCapture(1)  # Live camera source
     if not source.isOpened():
         print("Cannot open camera")
 
