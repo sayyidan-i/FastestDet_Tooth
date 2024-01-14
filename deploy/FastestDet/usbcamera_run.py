@@ -127,7 +127,7 @@ if __name__ == '__main__':
     new_frame_time = 0
         
     # source
-    source = cv2.VideoCapture(0)
+    source = cv2.VideoCapture(1)
     model_onnx = 'yolov8_640.onnx'
     label = "tooth.names"
     thresh = 0.5
