@@ -13,4 +13,6 @@
 * Simple data augmentation: FastestDet uses simple data augmentation methods such as random translation and scaling, without using moscia and Mixup. This is because lightweight models have low learning ability and cannot handle complex data augmentation.
 
 # Reference
+* https://github.com/dog-qiuqiu/FastestDet
 * https://github.com/Tencent/ncnn
+* https://github.com/jahongir7174/YOLOv8-onnx
