@@ -1,5 +1,6 @@
-***2022.7.14:Optimize loss, adopt IOU aware based on smooth L1, and the AP is significantly increased by 0.7***
+
 # :zap:FastestDet:zap:
+![Github](https://github.com/dog-qiuqiu/FastestDet)
 [![DOI](https://zenodo.org/badge/508635170.svg)](https://zenodo.org/badge/latestdoi/508635170)
 ![image](https://img.shields.io/github/license/dog-qiuqiu/FastestDet)
 ![image](https://img.shields.io/github/stars/dog-qiuqiu/FastestDet?style=flat)
