@@ -108,12 +108,12 @@ int main()
 
     // 加载模型
     ncnn::Net net;
-    net.load_param("weights/epoch230-sim-opt.param");
-    net.load_model("weights/epoch230-sim-opt.bin");  
+    net.load_param("../weights/epoch230-sim-opt.param");
+    net.load_model("../weights/epoch230-sim-opt.bin");  
     printf("ncnn model load sucess...\n");
 
     // 加载图片
-    cv::Mat img = cv::imread("karies-gigi.jpg");
+    cv::Mat img = cv::imread("../img/karies gigi.jpg");
     int img_width = img.cols;
     int img_height = img.rows;
 
@@ -229,7 +229,7 @@ for (size_t i = 0; i < nms_boxes.size(); i++)
 
 
     
-    cv::imwrite("karies_result.jpg", img);
+    cv::imwrite("../img/karies_result.jpg", img);
     
     return 0;
 }
