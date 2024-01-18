@@ -31,10 +31,7 @@ if __name__ == '__main__':
         print(f"FPS: {fps}")
 
         # Display the resized image
-        cv2.imshow(window_name, img)
-
-        # if cv2.waitKey(1) == ord('c'):  # Press 'c' to capture an image
-        #    capture_image(img)  
+        cv2.imshow(window_name, img) 
         
         if cv2.waitKey(1) == 27:
             break
