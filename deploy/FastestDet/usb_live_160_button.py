@@ -2,8 +2,8 @@ import cv2
 import time
 import numpy as np
 import onnxruntime
-import requests
-import imutils
+import os
+from datetime import datetime
 
 # sigmoid function
 def sigmoid(x):
@@ -119,7 +119,7 @@ def mouse_click(event,x,y,flags,param):
     global loop
     if event == cv2.EVENT_LBUTTONDOWN:
         global image_counter
-        img_name = f"result/captured_image_{image_counter}.jpg"
+        img_name = f"result/{date_time_str}/captured_image_{image_counter}.jpg"
         cv2.imwrite(img_name, img)
         image_counter += 1
  
@@ -144,6 +144,7 @@ if __name__ == '__main__':
    # indow_height = 600
     window_name = "usb_cam"
     cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
 
     # Load label names
     names = []
@@ -161,22 +162,20 @@ if __name__ == '__main__':
         "Karang gigi": (128, 0, 128),   # Karang gigi - Ungu
         "Lain-Lain": (128, 128, 128)    # Lain-Lain - Abu-abu
 }
-
-    
-    # Adjust OpenCV window size
-    #cv2.resizeWindow(window_name, window_width, window_height)
-    #cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_NORMAL)
-    #cv2.setWindowProperty(window_name, 800, 800)
-    # Set the window to be full screen
-    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
     
     session = onnxruntime.InferenceSession(model_onnx)
     
     #buat save gambar
     image_counter = 0
     
+    #callback mouse
     cv2.setMouseCallback(window_name,mouse_click)
     loop=True
+    
+    #buat folder result
+    current_datetime = datetime.now()
+    date_time_str = current_datetime.strftime("%d%m%Y_%H%M")
+    os.makedirs(f"result/{date_time_str}", exist_ok=True)
     
            
     while loop:
