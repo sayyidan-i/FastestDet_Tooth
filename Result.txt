@@ -1,0 +1,89 @@
+img karies gigi.png
+thresh 0.5
+
+
+352
+fastestDet
+	Pth: 367.483482ms, 
+
+	onnx: 189.320426ms,
+	
+	ncnn: 62.14 ms,
+	FPS: 3.92157
+	FPS: 11.6959
+	FPS: 9.43396
+	FPS: 9.47867
+	FPS: 9.4697
+	FPS: 9.4697
+	FPS: 9.4697
+	FPS: 9.47867
+	FPS: 9.47867
+	FPS: 9.35454
+	FPS: 9.59693
+	
+yolov8
+	pt : -
+	onnx: 444.487373ms
+	FPS: 0.93
+	FPS: 0.89
+	FPS: 2.08
+	FPS: 2.12
+	FPS: 2.12
+	FPS: 2.09
+	FPS: 2.08
+	FPS: 2.04
+	FPS: 1.97
+	FPS: 2.00
+
+
+
+	ncnn:
+	langsung segmentation fault
+
+
+160
+fastestdet
+	pth: 378.269080ms
+	
+	onnx: 47.631660ms
+	FPS: 10.81851033152178
+	FPS: 13.552002119568202
+	FPS: 14.013103339981893
+	FPS: 14.207913715367756
+	FPS: 9.462465341776893
+	FPS: 10.796343820866785
+	FPS: 9.286295625528599
+	FPS: 9.586126036764723
+	FPS: 9.366550840114694
+	FPS: 9.4265037712272
+	
+
+	ncnn: 10.78 ms
+	FPS: 6.48148
+	FPS: 9.47867
+	FPS: 9.47867
+	FPS: 9.4697
+	FPS: 9.47867
+	FPS: 9.4697
+	FPS: 9.47867
+	FPS: 9.4697
+	FPS: 9.47867
+	FPS: 9.4518
+	
+yolov8
+	
+	pt = -
+	onnx: 106.710565ms
+	FPS: 0.32
+	FPS: 7.50
+	FPS: 7.11
+	FPS: 4.80
+	FPS: 6.84
+	FPS: 7.62
+	FPS: 7.69
+	FPS: 6.77
+	FPS: 7.70
+	FPS: 7.67
+	ncnn:
+	langsung segmentation fault
+

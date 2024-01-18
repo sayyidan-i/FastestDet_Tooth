@@ -4,6 +4,7 @@ from argparse import ArgumentParser
 
 import cv2
 import numpy
+import time as gettime
 
 warnings.filterwarnings("ignore")
 
@@ -134,22 +135,27 @@ def export(args):
 
 def test(args):
     # Load model
-    model = ONNXDetect(args, onnx_path='./weights/best.onnx')
+    model = ONNXDetect(args, onnx_path='./weights/yolov8_352.onnx')
 
     frame = cv2.imread('karies gigi.jpg')
     image = frame.copy()
+    
+    start = gettime.perf_counter()
     outputs = model(image)
+    end = gettime.perf_counter()
+    time = (end - start) * 1000.
+    print("time:%fms"%time)
     for output in outputs:
         x, y, w, h, score, index = output
         cv2.rectangle(frame, (int(x), int(y)), (int(x + w), int(y + h)), (0, 255, 0), 2)
-    cv2.imwrite('output.jpg', frame)
+    cv2.imwrite('karies gigi yolov8 352.jpg', frame)
 
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--input-size', default=160, type=int)
+    parser.add_argument('--input-size', default=352, type=int)
     parser.add_argument('--export', action='store_true')
-    parser.add_argument('--test', action='store_true')
+    parser.add_argument('--test', default = 'test', action='store_true')
 
     args = parser.parse_args()
 

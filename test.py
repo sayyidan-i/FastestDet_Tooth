@@ -3,7 +3,7 @@ import cv2
 import onnx
 import time
 import argparse
-from onnxsim import simplify
+#from onnxsim import simplify
 
 import torch
 from utils.tool import *
@@ -13,9 +13,9 @@ if __name__ == '__main__':
     # 指定训练配置文件
     parser = argparse.ArgumentParser()
     parser.add_argument('--yaml', type=str, default="tooth.yaml", help='.yaml config')
-    parser.add_argument('--weight', type=str, default="weights\epoch-230.pth", help='.weight config')
+    parser.add_argument('--weight', type=str, default="weights/FastestDet_160_Final.pth", help='.weight config')
     parser.add_argument('--img', type=str, default='karies gigi.jpg', help='The path of test image')
-    parser.add_argument('--thresh', type=float, default=0.65, help='The path of test image')
+    parser.add_argument('--thresh', type=float, default=0.5, help='The path of test image')
     parser.add_argument('--onnx', action="store_true", default=False, help='Export onnx file')
     parser.add_argument('--torchscript', action="store_true", default=False, help='Export torchscript file')
     parser.add_argument('--cpu', action="store_true", default="cpu", help='Run on cpu')

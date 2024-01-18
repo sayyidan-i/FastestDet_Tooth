@@ -221,6 +221,7 @@ if __name__ == '__main__':
         new_frame_time = time.time()
         fps = 1/(new_frame_time-prev_frame_time)
         prev_frame_time = new_frame_time
+        #fps = str(fps)
         fps = str(int(fps))
 
         # Display FPS on the screen

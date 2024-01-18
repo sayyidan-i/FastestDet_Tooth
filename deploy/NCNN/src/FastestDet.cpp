@@ -108,12 +108,12 @@ int main()
 
     // 加载模型
     ncnn::Net net;
-    net.load_param("../weights/epoch230-sim-opt.param");
-    net.load_model("../weights/epoch230-sim-opt.bin");  
+    net.load_param("./weights/epoch230-sim-opt.param");
+    net.load_model("./weights/epoch230-sim-opt.bin");  
     printf("ncnn model load sucess...\n");
 
     // 加载图片
-    cv::Mat img = cv::imread("../img/karies gigi.jpg");
+    cv::Mat img = cv::imread("./img/karies gigi.jpg");
     int img_width = img.cols;
     int img_height = img.rows;
 
@@ -127,7 +127,8 @@ int main()
 
     // creat extractor
     ncnn::Extractor ex = net.create_extractor();
-    ex.set_num_threads(4);
+    //ex.set_num_threads(4);
+    net.opt.num_threads=4;
 
     double start = ncnn::get_current_time();
     //set input tensor
@@ -229,7 +230,7 @@ for (size_t i = 0; i < nms_boxes.size(); i++)
 
 
     
-    cv::imwrite("../img/karies_result.jpg", img);
+    cv::imwrite("./img/karies result.jpg", img);
     
     return 0;
 }

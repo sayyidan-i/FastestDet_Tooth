@@ -103,8 +103,8 @@ int main() {
 
     ncnn::Net net;
    // net.opt.num_threads=4;
-    net.load_param("weights/yolov8_352-sim-opt.param");
-    net.load_model("weights/yolov8_352-sim-opt.bin");
+    net.load_param("./weights/yolov8_160-sim-opt-fp16.param");
+    net.load_model("./weights/yolov8_160-sim-opt-fp16.bin");
 
     cv::VideoCapture cap("/dev/video1");
 

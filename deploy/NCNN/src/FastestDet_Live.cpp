@@ -103,8 +103,8 @@ int main() {
 
     ncnn::Net net;
    // net.opt.num_threads=4;
-    net.load_param("epoch230-sim-opt-fp16.param");
-    net.load_model("epoch230-sim-opt-fp16.bin");
+    net.load_param("./weights/epoch230-sim-opt-fp16.param");
+    net.load_model("./weights/epoch230-sim-opt-fp16.bin");
 
     cv::VideoCapture cap("/dev/video1");
 
