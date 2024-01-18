@@ -141,14 +141,14 @@ if __name__ == '__main__':
     opt = parser.parse_args()
     assert os.path.exists(opt.img)
     source = opt.img
-    model_onnx = 'epoch230_160.onnx'
+    model_onnx = 'weight\epoch230-opt.onnx'
     label = "tooth.names"
     thresh = 0.3
     
     img = cv2.imread(source)
     #img =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
     # 模型输入的宽高
-    input_width, input_height = 160, 160
+    input_width, input_height = 352, 352
     # 加载模型
     session = onnxruntime.InferenceSession(model_onnx)
     # 目标检测
