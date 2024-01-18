@@ -1,52 +1,47 @@
 import cv2
 import time
+import numpy as np        
 
-def main():
-    # Open the default camera (usually camera index 0)
-    cap = cv2.VideoCapture(1)
+if __name__ == '__main__':
+    
+    
+    #find fps
+    prev_frame_time = 0
+    new_frame_time = 0
+        
+    # source
+    source = cv2.VideoCapture(1)
+    window_name="usb camera"
 
-    if not cap.isOpened():
-        print("Error: Could not open camera.")
-        return
+    cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
 
-    # Get the frames per second (fps) of the camera
-    fps = cap.get(cv2.CAP_PROP_FPS)
-    print("Camera FPS:", fps)
 
-    # Create a window for displaying the camera feed
-    cv2.namedWindow('Camera Feed', cv2.WINDOW_NORMAL)
-
-    # Initialize variables for FPS calculation
-    start_time = time.time()
-    frame_count = 0
-
+    cv2.setWindowProperty(window_name, cv2.WND_PROP_FULLSCREEN, cv2.WINDOW_FULLSCREEN)
+    
+    
+           
     while True:
-        # Read a frame from the camera
-        ret, frame = cap.read()
-
-        if not ret:
-            print("Error: Could not read frame.")
-            break
-
-        # Display the frame
-        cv2.imshow('Camera Feed', frame)
-
+        ret, img = source.read()
+               
         # Calculate FPS
-        frame_count += 1
-        elapsed_time = time.time() - start_time
-        if elapsed_time > 1.0:
-            fps = frame_count / elapsed_time
-            print("FPS:", fps)
-            frame_count = 0
-            start_time = time.time()
+        new_frame_time = time.time()
+        fps = 1/(new_frame_time-prev_frame_time)
+        prev_frame_time = new_frame_time
+        #fps = str(fps)
+        fps = str(int(fps))
 
-        # Check for the 'q' key to exit the loop
-        if cv2.waitKey(1) & 0xFF == ord('q'):
+        # Display FPS on the screen
+        cv2.putText(img, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        print(f"FPS: {fps}")
+
+        # Display the image
+        cv2.imshow(window_name, img)
+
+        #if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
+            #capture_image(img)  
+        
+        if cv2.waitKey(1) == 27:
             break
+        
 
-    # Release the camera and close the window
-    cap.release()
     cv2.destroyAllWindows()
-
-if __name__ == "__main__":
-    main()
