@@ -106,11 +106,9 @@ int main() {
     net.load_param("./weights/epoch230-sim-opt-fp16.param");
     net.load_model("./weights/epoch230-sim-opt-fp16.bin");
 
-    cv::VideoCapture cap("/dev/video1");
-
+    cv::VideoCapture cap("/dev/video0");
     if (!cap.isOpened()) {
-        std::cout << "Error: Could not access the camera" << std::endl;
-        return -1;
+        cv::VideoCapture cap("/dev/video1");
     }
     
     // Buat pemetaan antara kelas dan warna
