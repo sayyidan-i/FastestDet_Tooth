@@ -107,8 +107,9 @@ int main() {
     net.load_model("./weights/FastestDet_160_AP2.6-sim-opt-fp16.bin");
 
     cv::VideoCapture cap("/dev/video0");
+
     if (!cap.isOpened()) {
-        cv::VideoCapture cap("/dev/video1");
+        cap.open("/dev/video1");
     }
     
     // Buat pemetaan antara kelas dan warna
