@@ -18,7 +18,7 @@ if __name__ == '__main__':
         ret, img = source.read()
         
         # Resize the image to 640x640
-        img = cv2.resize(img, (640, 640))
+        #img = cv2.resize(img, (640, 640))
         
         # Calculate FPS
         new_frame_time = time.time()
