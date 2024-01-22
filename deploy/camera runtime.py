@@ -8,7 +8,10 @@ if __name__ == '__main__':
     new_frame_time = 0
     
     # Source
-    source = cv2.VideoCapture(1)
+    source = cv2.VideoCapture(0)
+    if not source.isOpened():
+        source = cv2.VideoCapture(1)
+    
     window_name = "usb camera"
 
     cv2.namedWindow(window_name, cv2.WINDOW_NORMAL)
