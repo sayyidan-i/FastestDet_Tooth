@@ -108,7 +108,7 @@ int main() {
 
     cv::VideoCapture cap("/dev/video0");
     if (!cap.isOpened()) {
-        cv::VideoCapture cap("/dev/video1");
+        cap.open("/dev/video1");
     }
     
     // Buat pemetaan antara kelas dan warna
