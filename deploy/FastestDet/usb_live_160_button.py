@@ -134,7 +134,10 @@ if __name__ == '__main__':
     new_frame_time = 0
         
     # source
-    source = cv2.VideoCapture(1)
+    source = cv2.VideoCapture(0)
+    if not source.isOpened():
+        source = cv2.VideoCapture(1)    
+    
     model_onnx = 'weight/FastestDet_160_AP2.6.onnx'
     label = "tooth.names"
     thresh = 0.5

@@ -122,9 +122,9 @@ if __name__ == "__main__":
     # Load model
     model = ONNXDetect(onnx_path='weights/yolov8_352.onnx')
 
-    source = cv2.VideoCapture(1)  # Live camera source
+    source = cv2.VideoCapture(0)
     if not source.isOpened():
-        print("Cannot open camera")
+        source = cv2.VideoCapture(1)
 
 
     # Variables for FPS calculation
