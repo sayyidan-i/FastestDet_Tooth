@@ -138,7 +138,8 @@ if __name__ == '__main__':
     if not source.isOpened():
         source = cv2.VideoCapture(1)
         
-    model_onnx = 'weight/FastestDet_160_AP2.6.onnx'
+    #model_onnx = 'weight/FastestDet_160_AP2.6.onnx'
+    model_onnx = 'weight/epoch230.onnx'
     label = "tooth.names"
     thresh = 0.5
     
@@ -191,7 +192,8 @@ if __name__ == '__main__':
         #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
 
         
-        input_width, input_height = 160, 160
+        #input_width, input_height = 160, 160
+        input_width, input_height = 352, 352
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
 
         if bboxes is not None:
