@@ -105,6 +105,11 @@ class ONNXDetect:
 
 
 if __name__ == "__main__":
+    
+    #find fps
+    prev_frame_time = 0
+    new_frame_time = 0
+    
     # Define class labels and their associated colors
     class_labels = ["normal", "karies kecil", "karies sedang", "karies besar", "stain", "karang gigi", "lain-lain"]
     label_colors = {
@@ -132,13 +137,22 @@ if __name__ == "__main__":
     frame_counter = 0
     
     while True:
+        start_cap = time.perf_counter()
         ret, frame = source.read()
+        end_cap = time.perf_counter()
+        time_cap = (end_cap - start_cap) * 1000.
+        print("capture time:%fms"%time_cap)
         if not ret:
             print("Can't receive frame")
             break
 
         image = frame.copy()
+        start_inf = time.perf_counter()
         outputs = model(image)
+        end_inf = time.perf_counter()
+        time_inf = (end_inf - start_inf) * 1000.
+        print("inference time:%fms"%time_inf)
+        
 
         for output in outputs:
             x, y, w, h, score, index = output
@@ -159,18 +173,21 @@ if __name__ == "__main__":
             label_text = f"{label}: {score:.2f}"  # Concatenate label and score
             cv2.putText(frame, label_text, (x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, bbox_color, 1)
 
-        
+
+        start_cap = time.perf_counter()
+        cv2.imshow('Real-time Detection', frame)
+        end_cap = time.perf_counter()
+        time_cap = (end_cap - start_cap) * 1000.
+        print("frame show time:%fms"%time_cap)
         
         # Calculate FPS
-        frame_counter += 1
-        end_time = time.time() - start_time
-        if end_time >= 1:
-            fps = frame_counter / end_time
-            print(f"FPS: {fps:.2f}")
-            frame_counter = 0
-            start_time = time.time()
-
-        cv2.imshow('Real-time Detection', frame)
+        new_frame_time = time.time()
+        fps = 1/(new_frame_time-prev_frame_time)
+        prev_frame_time = new_frame_time
+        #fps = str(fps)
+        fps = str(int(fps))
+        print("FPS: ", fps)
+        
         if cv2.waitKey(1) == ord('q'):
             break
         

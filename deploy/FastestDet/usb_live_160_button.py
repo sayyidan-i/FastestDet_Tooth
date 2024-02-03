@@ -182,16 +182,25 @@ if __name__ == '__main__':
     
            
     while loop:
+        start_cap = time.perf_counter()
         ret, img = source.read()
+        end_cap = time.perf_counter()
+        time_cap = (end_cap - start_cap) * 1000.
+        print("capture time:%fms"%time_cap)
+        
        
         # Resize image without changing resolution
         img_resized = img
         #img_resized =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
         #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
-
         
         input_width, input_height = 160, 160
+        
+        start_inf = time.perf_counter()
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
+        end_inf = time.perf_counter()
+        time_inf = (end_inf - start_inf) * 1000.
+        print("inference time:%fms"%time_inf)
 
         if bboxes is not None:
             #print("=================box info===================")
@@ -228,11 +237,15 @@ if __name__ == '__main__':
 
         # Display FPS on the screen
         cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-        print(f"FPS: {fps}")
-
+        
         # Display the image
+        start_show = time.perf_counter()
         cv2.imshow(window_name, img_resized)
-
+        end_show = time.perf_counter()
+        time_show = (end_show - start_show) * 1000.
+        print("Image show time:%fms"%time_show)
+        print(f"FPS: {fps}")
+        
         #if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
             #capture_image(img_resized)  
         
