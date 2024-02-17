@@ -125,7 +125,7 @@ if __name__ == "__main__":
     input_size = 160
 
     # Load model
-    model = ONNXDetect(onnx_path='weights/yolov8_160.onnx')
+    model = ONNXDetect(onnx_path='weights/yolov8_160_0.29.onnx')
 
     source = cv2.VideoCapture(0)
     if not source.isOpened():

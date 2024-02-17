@@ -1,0 +1,998 @@
+frame show time:2.003345ms
+FPS:  4
+capture time:63.282674ms
+inference time:122.425697ms
+frame show time:1.937845ms
+FPS:  5
+capture time:61.675955ms
+inference time:118.238671ms
+frame show time:1.980679ms
+FPS:  5
+capture time:68.886665ms
+inference time:122.467155ms
+frame show time:1.950386ms
+FPS:  4
+capture time:51.625728ms
+inference time:116.949039ms
+frame show time:1.992053ms
+FPS:  5
+capture time:66.353192ms
+inference time:121.192106ms
+frame show time:1.870636ms
+FPS:  5
+capture time:65.933439ms
+inference time:119.030135ms
+frame show time:1.967512ms
+FPS:  5
+capture time:64.382304ms
+inference time:121.161813ms
+frame show time:2.146721ms
+FPS:  5
+capture time:62.585710ms
+inference time:115.041611ms
+frame show time:2.082096ms
+FPS:  5
+capture time:72.192519ms
+inference time:114.515690ms
+frame show time:1.986428ms
+FPS:  5
+capture time:68.869166ms
+inference time:120.059099ms
+frame show time:2.010012ms
+FPS:  5
+capture time:63.459674ms
+inference time:123.344119ms
+frame show time:2.233764ms
+FPS:  5
+capture time:64.601848ms
+inference time:124.481000ms
+frame show time:2.169430ms
+FPS:  5
+capture time:59.812152ms
+inference time:122.906282ms
+frame show time:1.961720ms
+FPS:  5
+capture time:64.894850ms
+inference time:119.112426ms
+frame show time:1.979345ms
+FPS:  5
+capture time:64.502639ms
+inference time:121.375357ms
+frame show time:1.873220ms
+FPS:  5
+capture time:61.955082ms
+inference time:118.845758ms
+frame show time:1.991554ms
+FPS:  5
+capture time:68.413704ms
+inference time:120.092350ms
+frame show time:2.009804ms
+FPS:  5
+capture time:63.381715ms
+inference time:122.564989ms
+frame show time:1.969762ms
+FPS:  5
+capture time:61.523621ms
+inference time:118.216254ms
+frame show time:1.974553ms
+FPS:  5
+capture time:69.067500ms
+inference time:122.245945ms
+frame show time:1.986137ms
+FPS:  5
+capture time:51.755229ms
+inference time:125.378464ms
+frame show time:1.865844ms
+FPS:  5
+capture time:58.615854ms
+inference time:115.248154ms
+frame show time:2.082971ms
+FPS:  5
+capture time:71.863475ms
+inference time:114.365814ms
+frame show time:1.973178ms
+FPS:  5
+capture time:68.903332ms
+inference time:122.368280ms
+frame show time:1.963262ms
+FPS:  4
+capture time:51.687145ms
+inference time:123.800829ms
+frame show time:2.236263ms
+FPS:  5
+capture time:63.872177ms
+inference time:127.108100ms
+frame show time:1.997678ms
+FPS:  5
+capture time:56.494216ms
+inference time:134.309351ms
+frame show time:1.960095ms
+FPS:  5
+capture time:49.068754ms
+inference time:116.601620ms
+frame show time:1.892678ms
+FPS:  5
+capture time:63.383257ms
+inference time:121.695317ms
+frame show time:1.789802ms
+FPS:  4
+capture time:54.724539ms
+inference time:115.136611ms
+frame show time:2.069596ms
+FPS:  5
+capture time:68.337745ms
+inference time:116.072825ms
+frame show time:2.001137ms
+FPS:  5
+capture time:70.988970ms
+inference time:143.673741ms
+frame show time:2.241097ms
+FPS:  4
+capture time:40.354910ms
+inference time:142.325358ms
+frame show time:1.944470ms
+FPS:  5
+capture time:37.150932ms
+inference time:118.524631ms
+frame show time:1.829969ms
+FPS:  5
+capture time:65.908689ms
+inference time:133.987849ms
+frame show time:1.870886ms
+FPS:  4
+capture time:50.016552ms
+inference time:122.028319ms
+frame show time:1.968470ms
+FPS:  5
+capture time:65.452561ms
+inference time:118.305630ms
+frame show time:1.955845ms
+FPS:  5
+capture time:65.705146ms
+inference time:124.843628ms
+frame show time:2.160096ms
+FPS:  5
+capture time:59.457067ms
+inference time:119.700846ms
+frame show time:2.080596ms
+FPS:  5
+capture time:67.826534ms
+inference time:121.306189ms
+frame show time:1.868136ms
+FPS:  5
+capture time:54.065909ms
+inference time:119.928307ms
+frame show time:2.025387ms
+FPS:  5
+capture time:63.611925ms
+inference time:123.519078ms
+frame show time:2.234222ms
+FPS:  5
+capture time:64.449305ms
+inference time:115.419904ms
+frame show time:1.973762ms
+FPS:  5
+capture time:68.331995ms
+inference time:135.749944ms
+frame show time:2.240013ms
+FPS:  4
+capture time:48.574668ms
+inference time:125.273422ms
+frame show time:2.137262ms
+FPS:  5
+capture time:62.391668ms
+inference time:121.563607ms
+frame show time:1.834594ms
+FPS:  5
+capture time:54.950081ms
+inference time:121.638859ms
+frame show time:1.790803ms
+FPS:  5
+capture time:56.390840ms
+inference time:140.392567ms
+frame show time:2.151969ms
+FPS:  4
+capture time:47.790238ms
+inference time:115.844951ms
+frame show time:1.798801ms
+FPS:  5
+capture time:68.833509ms
+inference time:133.457080ms
+frame show time:2.145427ms
+FPS:  4
+capture time:50.570418ms
+inference time:115.095072ms
+frame show time:2.088886ms
+FPS:  5
+capture time:71.893857ms
+inference time:125.218789ms
+frame show time:2.138386ms
+FPS:  4
+capture time:58.527749ms
+inference time:118.827673ms
+frame show time:1.977802ms
+FPS:  5
+capture time:68.459340ms
+inference time:115.328698ms
+frame show time:2.086093ms
+FPS:  5
+capture time:67.866087ms
+inference time:118.389338ms
+frame show time:1.955010ms
+FPS:  5
+capture time:65.672743ms
+inference time:118.470797ms
+frame show time:1.969635ms
+FPS:  5
+capture time:68.835467ms
+inference time:121.235894ms
+frame show time:1.862426ms
+FPS:  5
+capture time:61.968600ms
+inference time:114.883779ms
+frame show time:1.978094ms
+FPS:  5
+capture time:68.462298ms
+inference time:126.414337ms
+frame show time:1.978301ms
+FPS:  4
+capture time:61.767474ms
+inference time:118.247379ms
+frame show time:1.861343ms
+FPS:  5
+capture time:66.187287ms
+inference time:124.235784ms
+frame show time:2.163845ms
+FPS:  5
+capture time:59.861506ms
+inference time:126.270169ms
+frame show time:1.941051ms
+FPS:  5
+capture time:61.691307ms
+inference time:122.477026ms
+frame show time:1.966343ms
+FPS:  5
+capture time:51.547006ms
+inference time:122.429775ms
+frame show time:1.937343ms
+FPS:  5
+capture time:61.628264ms
+inference time:124.321868ms
+frame show time:2.175053ms
+FPS:  5
+capture time:63.474024ms
+inference time:118.011961ms
+frame show time:1.942843ms
+FPS:  5
+capture time:65.094615ms
+inference time:119.036550ms
+frame show time:1.990427ms
+FPS:  5
+capture time:64.395528ms
+inference time:124.001700ms
+frame show time:2.253761ms
+FPS:  5
+capture time:63.569441ms
+inference time:119.593469ms
+frame show time:2.155261ms
+FPS:  5
+capture time:63.917525ms
+inference time:123.083237ms
+frame show time:1.969010ms
+FPS:  5
+capture time:60.987719ms
+inference time:118.656298ms
+frame show time:1.991302ms
+FPS:  5
+capture time:68.891342ms
+inference time:123.119612ms
+frame show time:2.089469ms
+FPS:  4
+capture time:51.131504ms
+inference time:123.743531ms
+frame show time:2.239303ms
+FPS:  5
+capture time:63.988193ms
+inference time:118.061920ms
+frame show time:1.942009ms
+FPS:  5
+capture time:65.473659ms
+inference time:115.080614ms
+frame show time:1.819175ms
+FPS:  5
+capture time:68.407215ms
+inference time:124.358201ms
+frame show time:2.144678ms
+FPS:  4
+capture time:63.477482ms
+inference time:118.254420ms
+frame show time:1.972801ms
+FPS:  5
+capture time:65.310325ms
+inference time:118.002045ms
+frame show time:1.863468ms
+FPS:  5
+capture time:66.099536ms
+inference time:127.128673ms
+frame show time:2.076302ms
+FPS:  4
+capture time:52.726553ms
+inference time:131.645571ms
+frame show time:2.136260ms
+FPS:  4
+capture time:53.552641ms
+inference time:139.266150ms
+frame show time:2.154053ms
+FPS:  4
+capture time:42.849254ms
+inference time:123.949491ms
+frame show time:2.242969ms
+FPS:  5
+capture time:63.648192ms
+inference time:115.978451ms
+frame show time:2.087677ms
+FPS:  5
+capture time:69.005176ms
+inference time:135.184047ms
+frame show time:0.623753ms
+FPS:  4
+capture time:48.987952ms
+inference time:162.048431ms
+frame show time:1.712341ms
+FPS:  4
+capture time:19.711682ms
+inference time:124.585494ms
+frame show time:0.592420ms
+FPS:  6
+capture time:61.225220ms
+inference time:135.508132ms
+frame show time:2.154553ms
+FPS:  4
+capture time:47.704778ms
+inference time:115.394323ms
+frame show time:1.968426ms
+FPS:  5
+capture time:72.781361ms
+inference time:120.876934ms
+frame show time:0.633962ms
+FPS:  4
+capture time:56.106570ms
+inference time:117.194791ms
+frame show time:1.862718ms
+FPS:  5
+capture time:66.362163ms
+inference time:118.573465ms
+frame show time:2.024135ms
+FPS:  5
+capture time:69.489804ms
+inference time:121.214644ms
+frame show time:1.872884ms
+FPS:  5
+capture time:54.297311ms
+inference time:124.212700ms
+frame show time:2.191178ms
+FPS:  5
+capture time:63.577566ms
+inference time:115.174822ms
+frame show time:2.078636ms
+FPS:  5
+capture time:68.163713ms
+inference time:116.962206ms
+frame show time:1.999552ms
+FPS:  5
+capture time:66.364496ms
+inference time:119.856596ms
+frame show time:2.078177ms
+FPS:  5
+capture time:68.750925ms
+inference time:118.982091ms
+frame show time:1.975802ms
+FPS:  5
+capture time:58.598666ms
+inference time:120.314264ms
+frame show time:2.117510ms
+FPS:  5
+capture time:56.828741ms
+inference time:119.043883ms
+frame show time:1.972551ms
+FPS:  5
+capture time:62.397685ms
+inference time:115.593449ms
+frame show time:1.962260ms
+FPS:  5
+capture time:68.351048ms
+inference time:128.778223ms
+frame show time:2.162511ms
+FPS:  4
+capture time:55.287441ms
+inference time:120.391682ms
+frame show time:2.019844ms
+FPS:  5
+capture time:66.207037ms
+inference time:119.488052ms
+frame show time:1.961468ms
+FPS:  5
+capture time:55.293733ms
+inference time:125.106038ms
+frame show time:2.160428ms
+FPS:  5
+capture time:58.603666ms
+inference time:119.262051ms
+frame show time:2.083636ms
+FPS:  5
+capture time:68.168213ms
+inference time:118.859049ms
+frame show time:1.773634ms
+FPS:  5
+capture time:64.381862ms
+inference time:134.387627ms
+frame show time:1.952385ms
+FPS:  4
+capture time:49.919956ms
+inference time:184.508500ms
+frame show time:2.305137ms
+FPS:  4
+capture time:8.951752ms
+inference time:192.148955ms
+frame show time:2.395720ms
+FPS:  4
+capture time:5.264193ms
+inference time:170.939016ms
+frame show time:1.985801ms
+FPS:  5
+capture time:5.571652ms
+inference time:136.817471ms
+frame show time:2.273220ms
+FPS:  6
+capture time:31.675408ms
+inference time:168.861464ms
+frame show time:2.599680ms
+FPS:  4
+capture time:14.877741ms
+inference time:160.052337ms
+frame show time:1.868718ms
+FPS:  5
+capture time:17.961047ms
+inference time:156.259652ms
+frame show time:2.164803ms
+FPS:  5
+capture time:16.465082ms
+inference time:230.100810ms
+frame show time:12.694355ms
+FPS:  3
+capture time:3.219683ms
+inference time:292.510412ms
+frame show time:1.867301ms
+FPS:  3
+capture time:2.098886ms
+inference time:123.047945ms
+frame show time:1.645800ms
+FPS:  6
+capture time:1.452340ms
+inference time:140.686657ms
+frame show time:2.023302ms
+FPS:  5
+capture time:1.512507ms
+inference time:135.736425ms
+frame show time:1.812759ms
+FPS:  6
+capture time:3.716352ms
+inference time:117.854211ms
+frame show time:2.007343ms
+FPS:  7
+capture time:3.565851ms
+inference time:216.194658ms
+frame show time:1.895551ms
+FPS:  4
+capture time:1.613008ms
+inference time:146.506894ms
+frame show time:2.252303ms
+FPS:  5
+capture time:5.324985ms
+inference time:143.601755ms
+frame show time:2.212677ms
+FPS:  5
+^[capture time:2.217469ms
+inference time:137.320558ms
+frame show time:0.610711ms
+FPS:  5
+capture time:1.730051ms
+inference time:135.052463ms
+frame show time:1.997426ms
+FPS:  5
+capture time:21.113188ms
+inference time:144.450759ms
+frame show time:2.123844ms
+FPS:  5
+capture time:22.640571ms
+inference time:126.820964ms
+frame show time:2.009760ms
+FPS:  5
+capture time:32.384578ms
+inference time:134.464835ms
+frame show time:1.971718ms
+FPS:  5
+capture time:28.180473ms
+inference time:135.723383ms
+frame show time:2.243428ms
+FPS:  5
+capture time:31.563865ms
+inference time:147.182856ms
+frame show time:1.971593ms
+FPS:  4
+capture time:20.077725ms
+qinference time:133.104161ms
+frame show time:1.903010ms
+FPS:  5
+capture time:49.086619ms
+inference time:150.156205ms
+frame show time:0.597294ms
+FPS:  4
+capture time:17.486254ms
+inference time:161.057550ms
+frame show time:2.146469ms
+FPS:  4
+capture time:5.169276ms
+inference time:131.785363ms
+frame show time:1.862426ms
+FPS:  6
+capture time:40.371367ms
+inference time:129.426685ms
+frame show time:1.720967ms
+FPS:  5
+capture time:32.241994ms
+inference time:138.543105ms
+frame show time:1.846217ms
+FPS:  4
+capture time:31.333073ms
+inference time:143.130170ms
+frame show time:0.622836ms
+FPS:  5
+capture time:42.582462ms
+inference time:144.938970ms
+frame show time:1.826217ms
+FPS:  5
+capture time:32.078284ms
+qinference time:146.286477ms
+frame show time:1.964926ms
+FPS:  5
+qcapture time:24.874540ms
+inference time:145.073762ms
+frame show time:0.589670ms
+FPS:  5
+capture time:21.760316ms
+^[inference time:150.042621ms
+frame show time:0.573377ms
+FPS:  5
+capture time:16.079705ms
+^[inference time:142.299332ms
+frame show time:0.572503ms
+FPS:  5
+capture time:41.890667ms
+^[inference time:133.845707ms
+frame show time:0.622378ms
+FPS:  5
+capture time:32.601120ms
+inference time:115.743908ms^[
+frame show time:2.548763ms
+FPS:  5
+capture time:62.657645ms
+inference time:124.322701ms
+frame show time:1.842050ms
+FPS:  4
+capture time:55.726152ms
+inference time:122.500150ms
+frame show time:1.819676ms
+FPS:  5
+capture time:54.538729ms
+inference time:126.361753ms
+frame show time:0.576003ms
+FPS:  5
+capture time:54.024936ms
+inference time:132.974744ms
+frame show time:1.999427ms
+FPS:  5
+capture time:50.065166ms
+^[inference time:144.684594ms
+frame show time:1.836301ms
+FPS:  4
+capture time:25.621586ms
+inference time:141.123659ms
+frame show time:1.954593ms
+FPS:  5
+qcapture time:37.287518ms
+inference time:144.230300ms
+frame show time:2.005135ms
+FPS:  5
+qcapture time:25.846795ms
+qinference time:149.357117ms
+frame show time:0.567752ms
+FPS:  5
+capture time:11.236223ms
+inference time:144.485093ms
+frame show time:2.070218ms
+FPS:  5
+capture time:22.404278ms
+inference time:127.386591ms
+frame show time:1.880051ms
+FPS:  5
+capture time:55.497193ms
+inference time:133.559164ms
+frame show time:1.734217ms
+FPS:  4
+capture time:43.407007ms
+inference time:144.944971ms
+frame show time:0.568253ms
+FPS:  4
+capture time:23.500450ms
+inference time:128.313596ms
+frame show time:1.945093ms
+FPS:  5
+capture time:54.623188ms
+inference time:122.712652ms
+frame show time:1.848593ms
+FPS:  5
+capture time:54.641314ms
+inference time:143.355754ms
+frame show time:1.814676ms
+FPS:  4
+ccapture time:26.577674ms
+inference time:140.081321ms
+frame show time:2.138928ms
+FPS:  5
+capture time:38.927818ms
+inference time:124.848120ms
+frame show time:0.559294ms
+FPS:  5
+capture time:53.667684ms
+cinference time:147.154398ms
+frame show time:1.804467ms
+FPS:  4
+capture time:36.637723ms
+cinference time:120.681141ms
+frame show time:0.561252ms
+FPS:  5
+capture time:44.407429ms
+cinference time:129.779562ms
+frame show time:1.809593ms
+FPS:  4
+capture time:43.453091ms
+cinference time:172.612857ms
+frame show time:1.820800ms
+FPS:  4
+capture time:2.142844ms
+ccinference time:178.346302ms
+frame show time:9.134545ms
+FPS:  4
+capture time:1.618883ms
+cinference time:204.343307ms
+frame show time:1.751509ms
+FPS:  4
+capture time:2.436429ms
+cinference time:139.633819ms
+frame show time:2.296761ms
+FPS:  6
+capture time:3.357433ms
+cinference time:126.806964ms
+frame show time:1.914967ms
+FPS:  6
+capture time:22.350278ms
+cinference time:155.362814ms
+frame show time:1.827135ms
+FPS:  4
+capture time:2.523387ms
+cinference time:122.156023ms
+frame show time:1.968384ms
+FPS:  6
+capture time:47.215276ms
+inference time:140.459656ms
+frame show time:2.409762ms
+FPS:  4
+capture time:39.134652ms
+inference time:155.217896ms
+frame show time:2.457720ms
+FPS:  4
+capture time:10.275384ms
+inference time:149.095324ms
+frame show time:2.167719ms
+FPS:  5
+capture time:26.671716ms
+inference time:122.237066ms
+frame show time:0.577836ms
+FPS:  5
+capture time:48.069114ms
+inference time:133.457371ms
+frame show time:1.723175ms
+FPS:  4
+capture time:34.634005ms
+inference time:134.743711ms
+frame show time:1.807842ms
+FPS:  5
+capture time:32.006450ms
+inference time:141.744288ms
+frame show time:1.952968ms
+FPS:  4
+capture time:14.276529ms
+inference time:176.660545ms
+frame show time:0.724629ms
+FPS:  4
+capture time:3.617727ms
+inference time:225.968123ms
+frame show time:1.907343ms
+FPS:  3
+capture time:1.404507ms
+inference time:138.446562ms
+frame show time:2.085135ms
+FPS:  0
+capture time:4.789315ms
+inference time:122.500776ms
+frame show time:1.982718ms
+FPS:  7
+capture time:4.769357ms
+inference time:134.085999ms
+frame show time:2.043760ms
+FPS:  6
+capture time:4.931066ms
+inference time:127.566300ms
+frame show time:1.866926ms
+FPS:  6
+capture time:6.308073ms
+inference time:130.016646ms
+frame show time:2.146511ms
+FPS:  6
+capture time:3.399725ms
+inference time:223.896488ms
+frame show time:1.913634ms
+FPS:  0
+capture time:11.959434ms
+inference time:121.527479ms
+frame show time:1.905217ms
+FPS:  7
+capture time:2.971098ms
+inference time:145.876016ms
+frame show time:1.893384ms
+FPS:  5
+capture time:2.630638ms
+inference time:151.245710ms
+frame show time:2.978015ms
+FPS:  5
+capture time:3.149432ms
+inference time:232.904324ms
+frame show time:1.758384ms
+FPS:  3
+capture time:2.777347ms
+inference time:325.325658ms
+frame show time:1.847717ms
+FPS:  2
+capture time:1.989927ms
+inference time:172.662233ms
+frame show time:2.553305ms
+FPS:  5
+capture time:9.824049ms
+inference time:239.218689ms
+frame show time:1.889259ms
+FPS:  3
+capture time:5.661820ms
+inference time:148.795823ms
+frame show time:2.013510ms
+FPS:  5
+capture time:3.341016ms
+inference time:471.810553ms
+frame show time:1.787884ms
+FPS:  2
+capture time:2.577387ms
+inference time:191.971579ms
+frame show time:1.981844ms
+FPS:  4
+capture time:3.437392ms
+inference time:226.039082ms
+frame show time:1.818176ms
+FPS:  4
+capture time:1.408132ms
+inference time:189.584567ms
+frame show time:0.589003ms
+FPS:  4
+capture time:2.763680ms
+inference time:134.965837ms
+frame show time:2.217303ms
+FPS:  6
+capture time:6.816283ms
+inference time:127.202383ms
+frame show time:2.005676ms
+FPS:  6
+capture time:5.208693ms
+inference time:114.732612ms
+frame show time:2.084886ms
+FPS:  7
+capture time:5.293276ms
+inference time:114.010733ms
+frame show time:2.090468ms
+FPS:  7
+capture time:10.167926ms
+inference time:113.939483ms
+frame show time:2.098552ms
+FPS:  7
+capture time:10.808429ms
+inference time:124.588245ms
+frame show time:2.156010ms
+FPS:  6
+capture time:6.806076ms
+inference time:115.517533ms
+frame show time:1.855593ms
+FPS:  7
+capture time:5.183984ms
+inference time:117.401541ms
+frame show time:1.968552ms
+FPS:  7
+capture time:5.215317ms
+inference time:116.294828ms
+frame show time:1.998677ms
+FPS:  7
+capture time:4.640398ms
+inference time:136.854222ms
+frame show time:1.871592ms
+FPS:  6
+capture time:5.227693ms
+inference time:113.265354ms
+frame show time:1.962093ms
+FPS:  7
+capture time:54.379770ms
+inference time:112.232183ms
+frame show time:0.587669ms
+FPS:  5
+capture time:66.850332ms
+inference time:128.940266ms
+frame show time:2.160802ms
+FPS:  4
+capture time:49.067160ms
+inference time:153.585930ms
+frame show time:1.866301ms
+FPS:  4
+capture time:26.959134ms
+inference time:198.408486ms
+frame show time:1.961135ms
+FPS:  4
+capture time:1.507591ms
+inference time:131.630362ms
+frame show time:1.856009ms
+FPS:  6
+capture time:22.423820ms
+inference time:113.790898ms
+frame show time:1.925718ms
+FPS:  6
+capture time:69.564096ms
+inference time:114.388193ms
+frame show time:0.588503ms
+FPS:  5
+capture time:66.244204ms
+inference time:140.051696ms
+frame show time:2.235178ms
+FPS:  4
+capture time:41.177663ms
+inference time:143.971548ms
+frame show time:2.077135ms
+FPS:  4
+capture time:33.803251ms
+inference time:124.734703ms
+frame show time:0.642378ms
+FPS:  5
+capture time:54.431312ms
+inference time:177.162255ms
+frame show time:2.002426ms
+FPS:  4
+capture time:12.161602ms
+inference time:291.855659ms
+frame show time:2.295720ms
+FPS:  3
+capture time:5.612320ms
+inference time:232.625781ms
+frame show time:1.897051ms
+FPS:  3
+capture time:2.946098ms
+inference time:153.608138ms
+frame show time:2.052802ms
+FPS:  5
+capture time:2.912514ms
+inference time:120.671516ms
+frame show time:1.770759ms
+FPS:  6
+capture time:3.252141ms
+inference time:143.913673ms
+frame show time:1.779342ms
+FPS:  5
+capture time:2.997015ms
+qinference time:159.438000ms
+frame show time:1.682384ms
+FPS:  5
+capture time:3.471600ms
+qinference time:152.199131ms
+frame show time:1.756926ms
+FPS:  5
+capture time:3.450809ms
+qinference time:159.815420ms
+frame show time:1.906843ms
+FPS:  5
+capture time:3.006890ms
+qinference time:153.481221ms
+frame show time:2.238261ms
+FPS:  5
+capture time:4.180145ms
+inference time:121.682229ms
+frame show time:1.882218ms
+FPS:  6
+capture time:2.862389ms
+inference time:148.683280ms
+frame show time:1.968594ms
+FPS:  5
+capture time:3.508017ms
+inference time:134.835295ms
+frame show time:3.068974ms
+FPS:  6
+capture time:36.691182ms
+inference time:143.628672ms
+frame show time:2.232177ms
+FPS:  4
+capture time:28.141682ms
+inference time:213.625395ms
+frame show time:2.509721ms
+FPS:  3
+capture time:1.863259ms
+inference time:131.999031ms
+frame show time:1.771050ms
+FPS:  6
+capture time:2.197969ms
+inference time:155.810816ms
+frame show time:1.712258ms
+FPS:  5
+capture time:8.391542ms
+inference time:133.869832ms
+frame show time:2.103885ms
+FPS:  6
+capture time:52.463885ms
+inference time:232.321613ms
+frame show time:0.863421ms
+FPS:  3
+capture time:1.578550ms
+inference time:169.744885ms
+frame show time:0.564461ms
+FPS:  4
+capture time:3.207349ms
+inference time:175.344663ms
+frame show time:0.592170ms
+FPS:  4
+capture time:1.598549ms
+inference time:180.814899ms
+frame show time:0.567837ms
+FPS:  4
+capture time:2.827264ms
+inference time:163.026643ms
+frame show time:0.588044ms
+FPS:  5
+capture time:4.527273ms
+inference time:171.813353ms
+frame show time:0.582003ms
+FPS:  4
+capture time:2.886848ms
+inference time:332.891488ms
+frame show time:0.767004ms
+FPS:  2
+capture time:4.003645ms
+inference time:135.591757ms
+frame show time:1.953176ms
+FPS:  5
+capture time:2.018218ms
+inference time:121.083852ms
+frame show time:1.822676ms
+FPS:  6
+capture time:1.960593ms
+inference time:122.453150ms
+frame show time:2.094219ms
+FPS:  6
+capture time:5.201068ms
+inference time:123.296238ms
+frame show time:2.005510ms
+FPS:  6
+capture time:5.432277ms
+inference time:123.822907ms
+frame show time:1.961594ms
+FPS:  6
