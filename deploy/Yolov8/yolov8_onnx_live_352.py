@@ -174,12 +174,6 @@ if __name__ == "__main__":
             cv2.putText(frame, label_text, (x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, bbox_color, 1)
 
 
-        start_dis = time.perf_counter()
-        cv2.imshow('Real-time Detection', frame)
-        end_dis = time.perf_counter()
-        time_dis = (end_dis - start_dis) * 1000.
-        print("frame show time:%fms"%time_dis)
-        
         # Calculate FPS
         new_frame_time = time.time()
         fps = 1/(new_frame_time-prev_frame_time)
@@ -187,6 +181,18 @@ if __name__ == "__main__":
         #fps = str(fps)
         fps = str(int(fps))
         print("FPS: ", fps)
+        
+        # Display FPS on the image
+        cv2.putText(frame, "FPS: " + fps, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+        
+        
+        start_dis = time.perf_counter()
+        cv2.imshow('Real-time Detection', frame)
+        end_dis = time.perf_counter()
+        time_dis = (end_dis - start_dis) * 1000.
+        print("frame show time:%fms"%time_dis)
+        
+        
         
         if cv2.waitKey(1) == ord('q'):
             break
