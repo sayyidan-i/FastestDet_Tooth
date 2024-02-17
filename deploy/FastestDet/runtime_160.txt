@@ -1,0 +1,952 @@
+capture time:2049.742997ms
+inference time:42.897600ms
+Image show time:2.077021ms
+FPS: 0
+capture time:117.851232ms
+inference time:108.696389ms
+Image show time:4.480045ms
+FPS: 3
+capture time:50.792305ms
+inference time:39.396023ms
+Image show time:2.247190ms
+FPS: 8
+capture time:139.925497ms
+inference time:39.595900ms
+Image show time:0.602048ms
+FPS: 5
+capture time:129.720185ms
+inference time:40.492867ms
+Image show time:2.129063ms
+FPS: 5
+capture time:122.461446ms
+inference time:42.388428ms
+Image show time:2.155439ms
+FPS: 5
+capture time:134.078688ms
+inference time:45.018372ms
+Image show time:0.569297ms
+FPS: 5
+capture time:123.212912ms
+inference time:46.172467ms
+Image show time:1.943769ms
+FPS: 5
+capture time:121.527103ms
+inference time:41.307459ms
+Image show time:1.843810ms
+FPS: 5
+capture time:137.907685ms
+inference time:42.846349ms
+Image show time:0.567423ms
+FPS: 5
+capture time:124.817553ms
+inference time:45.073539ms
+Image show time:0.563006ms
+FPS: 5
+capture time:123.293746ms
+inference time:47.150310ms
+Image show time:0.598297ms
+FPS: 5
+capture time:114.887869ms
+inference time:46.933224ms
+Image show time:0.599048ms
+FPS: 5
+capture time:119.367664ms
+inference time:41.288417ms
+Image show time:1.841977ms
+FPS: 5
+capture time:131.136408ms
+inference time:44.849120ms
+Image show time:0.605465ms
+FPS: 5
+capture time:127.484913ms
+inference time:45.333416ms
+Image show time:1.996479ms
+FPS: 5
+capture time:128.957302ms
+inference time:46.984724ms
+Image show time:3.995707ms
+FPS: 5
+capture time:118.790492ms
+inference time:46.145049ms
+Image show time:1.957186ms
+FPS: 5
+capture time:125.145681ms
+inference time:48.712700ms
+Image show time:2.145646ms
+FPS: 5
+capture time:120.743261ms
+inference time:47.138476ms
+Image show time:0.637715ms
+FPS: 5
+capture time:123.057535ms
+inference time:46.961766ms
+Image show time:0.591089ms
+FPS: 5
+capture time:119.350539ms
+inference time:46.989349ms
+Image show time:0.612840ms
+FPS: 5
+capture time:119.110912ms
+inference time:46.097049ms
+Image show time:1.944270ms
+FPS: 5
+capture time:131.800331ms
+inference time:44.385240ms
+Image show time:0.573006ms
+FPS: 5
+capture time:120.504926ms
+inference time:44.705035ms
+Image show time:0.720549ms
+FPS: 5
+capture time:121.155849ms
+inference time:45.151498ms
+Image show time:0.566047ms
+FPS: 5
+capture time:126.860573ms
+inference time:48.868494ms
+Image show time:0.565256ms
+FPS: 5
+capture time:118.941202ms
+inference time:47.413479ms
+Image show time:0.566630ms
+FPS: 5
+capture time:118.965993ms
+inference time:45.344208ms
+Image show time:0.715674ms
+FPS: 5
+capture time:132.075584ms
+inference time:44.787869ms
+Image show time:0.693674ms
+FPS: 5
+capture time:120.128047ms
+inference time:45.425834ms
+Image show time:1.877727ms
+FPS: 5
+capture time:121.184016ms
+inference time:39.944695ms
+Image show time:0.642381ms
+FPS: 5
+capture time:141.172968ms
+inference time:42.353636ms
+Image show time:0.575672ms
+FPS: 5
+capture time:122.048733ms
+inference time:40.831329ms
+Image show time:2.134855ms
+FPS: 5
+capture time:134.865362ms
+inference time:41.099874ms
+Image show time:1.849394ms
+FPS: 5
+capture time:138.297106ms
+inference time:45.759171ms
+Image show time:0.576256ms
+FPS: 4
+capture time:122.346278ms
+inference time:46.931057ms
+Image show time:0.719424ms
+FPS: 5
+capture time:119.311247ms
+inference time:46.098757ms
+Image show time:1.943769ms
+FPS: 5
+capture time:125.114930ms
+inference time:44.237447ms
+Image show time:2.138938ms
+FPS: 5
+capture time:131.617496ms
+inference time:44.921787ms
+Image show time:0.634465ms
+FPS: 5
+capture time:123.378913ms
+inference time:42.052717ms
+Image show time:0.583214ms
+FPS: 5
+capture time:129.444891ms
+inference time:44.725285ms
+Image show time:0.720091ms
+FPS: 5
+capture time:123.439331ms
+inference time:46.832973ms
+Image show time:0.587090ms
+FPS: 5
+capture time:123.253745ms
+inference time:46.958808ms
+Image show time:0.592297ms
+FPS: 5
+capture time:119.471999ms
+inference time:41.103956ms
+Image show time:1.842810ms
+FPS: 5
+capture time:134.349149ms
+inference time:44.821702ms
+Image show time:0.568131ms
+FPS: 5
+capture time:126.896657ms
+inference time:49.397541ms
+Image show time:0.570047ms
+FPS: 4
+capture time:118.498238ms
+inference time:46.061881ms
+Image show time:1.973687ms
+FPS: 5
+capture time:121.138890ms
+inference time:46.825598ms
+Image show time:0.566422ms
+FPS: 5
+capture time:126.884157ms
+inference time:44.658535ms
+Image show time:1.986729ms
+FPS: 5
+capture time:121.836980ms
+inference time:41.260751ms
+Image show time:1.852311ms
+FPS: 5
+capture time:134.088479ms
+inference time:40.903997ms
+Image show time:2.137396ms
+FPS: 5
+capture time:138.282188ms
+inference time:39.658192ms
+Image show time:0.570923ms
+FPS: 5
+capture time:137.699058ms
+inference time:44.194988ms
+Image show time:2.148480ms
+FPS: 5
+capture time:121.896648ms
+inference time:44.785119ms
+Image show time:0.573422ms
+FPS: 5
+capture time:124.847219ms
+inference time:46.086213ms
+Image show time:0.564047ms
+FPS: 5
+capture time:122.317882ms
+inference time:42.299072ms
+Image show time:1.947602ms
+FPS: 5
+capture time:132.567772ms
+inference time:45.611354ms
+Image show time:0.567923ms
+FPS: 5
+capture time:124.750281ms
+inference time:47.037034ms
+Image show time:0.655882ms
+FPS: 5
+capture time:119.020100ms
+inference time:46.933992ms
+Image show time:1.945727ms
+FPS: 5
+capture time:119.827191ms
+inference time:45.072099ms
+Image show time:1.836601ms
+FPS: 5
+capture time:125.498120ms
+inference time:42.654868ms
+Image show time:0.566172ms
+FPS: 5
+capture time:127.092219ms
+inference time:43.883546ms
+Image show time:2.204813ms
+FPS: 5
+capture time:123.786646ms
+inference time:40.113260ms
+Image show time:2.136104ms
+FPS: 5
+capture time:139.794800ms
+inference time:43.669711ms
+Image show time:2.207771ms
+FPS: 5
+capture time:123.612186ms
+inference time:43.712878ms
+Image show time:2.215188ms
+FPS: 5
+capture time:127.720600ms
+inference time:41.211020ms
+Image show time:1.824309ms
+FPS: 5
+capture time:124.020940ms
+inference time:44.796347ms
+Image show time:1.975060ms
+FPS: 5
+capture time:121.548125ms
+inference time:41.960569ms
+Image show time:2.074394ms
+FPS: 5
+capture time:134.485582ms
+inference time:45.336185ms
+Image show time:3.831828ms
+FPS: 5
+capture time:118.491304ms
+inference time:47.105368ms
+Image show time:2.062020ms
+FPS: 5
+capture time:117.957882ms
+inference time:48.963928ms
+Image show time:0.573297ms
+FPS: 5
+capture time:122.679844ms
+inference time:46.904200ms
+Image show time:0.588589ms
+FPS: 5
+capture time:119.288728ms
+inference time:46.882367ms
+Image show time:0.594048ms
+FPS: 5
+capture time:119.548522ms
+inference time:42.628118ms
+Image show time:1.866643ms
+FPS: 5
+capture time:136.348933ms
+inference time:39.861965ms
+Image show time:0.637006ms
+FPS: 5
+capture time:137.297734ms
+inference time:43.842921ms
+Image show time:2.123771ms
+FPS: 5
+capture time:123.656853ms
+inference time:42.415116ms
+Image show time:1.756267ms
+FPS: 5
+capture time:135.230923ms
+inference time:39.834257ms
+Image show time:0.648340ms
+FPS: 5
+capture time:138.711664ms
+inference time:42.850620ms
+Image show time:0.568547ms
+FPS: 5
+capture time:132.927275ms
+inference time:40.084468ms
+Image show time:1.983227ms
+FPS: 5
+capture time:139.876092ms
+inference time:39.958133ms
+Image show time:0.567381ms
+FPS: 5
+capture time:137.078691ms
+inference time:41.024935ms
+Image show time:1.921185ms
+FPS: 5
+capture time:131.707930ms
+inference time:40.753266ms
+Image show time:2.159521ms
+FPS: 5
+capture time:138.550288ms
+inference time:42.195030ms
+Image show time:1.855268ms
+FPS: 5
+capture time:124.061732ms
+inference time:44.589511ms
+Image show time:0.602672ms
+FPS: 5
+capture time:121.120454ms
+inference time:44.687262ms
+Image show time:0.694298ms
+FPS: 5
+capture time:126.512088ms
+inference time:46.623489ms
+Image show time:1.735309ms
+FPS: 5
+capture time:130.711296ms
+inference time:57.735137ms
+Image show time:1.738808ms
+FPS: 4
+capture time:115.618359ms
+inference time:45.018890ms
+Image show time:2.195396ms
+FPS: 5
+capture time:121.437874ms
+inference time:40.285345ms
+Image show time:2.141104ms
+FPS: 5
+capture time:135.856554ms
+inference time:41.368522ms
+Image show time:1.841726ms
+FPS: 5
+capture time:135.159047ms
+inference time:42.050236ms
+Image show time:0.568714ms
+FPS: 5
+capture time:127.205679ms
+inference time:40.248136ms
+Image show time:2.132354ms
+FPS: 5
+capture time:135.886554ms
+inference time:40.782142ms
+Image show time:2.135353ms
+FPS: 5
+capture time:138.532454ms
+inference time:41.817401ms
+Image show time:0.561214ms
+FPS: 5
+capture time:127.745684ms
+inference time:45.262101ms
+Image show time:2.120979ms
+FPS: 5
+capture time:121.011328ms
+inference time:43.816338ms
+Image show time:2.203896ms
+FPS: 5
+capture time:127.784643ms
+inference time:41.404898ms
+Image show time:1.854017ms
+FPS: 5
+capture time:131.727973ms
+inference time:45.746481ms
+Image show time:2.333939ms
+FPS: 5
+capture time:119.385520ms
+inference time:47.442206ms
+Image show time:1.980644ms
+FPS: 5
+capture time:121.279788ms
+inference time:46.892492ms
+Image show time:0.594798ms
+FPS: 5
+capture time:119.428312ms
+inference time:47.961877ms
+Image show time:0.572714ms
+FPS: 5
+capture time:116.827871ms
+inference time:46.772532ms
+Image show time:0.595172ms
+FPS: 5
+capture time:123.512393ms
+inference time:48.746468ms
+Image show time:0.700382ms
+FPS: 5
+capture time:119.310228ms
+inference time:47.692166ms
+Image show time:0.566922ms
+FPS: 5
+capture time:117.107707ms
+inference time:47.821043ms
+Image show time:2.153395ms
+FPS: 5
+capture time:125.101575ms
+inference time:46.921701ms
+Image show time:1.938102ms
+FPS: 5
+capture time:121.838420ms
+inference time:47.245412ms
+Image show time:2.220688ms
+FPS: 5
+capture time:120.653449ms
+inference time:46.163942ms
+Image show time:3.822995ms
+FPS: 5
+capture time:131.126758ms
+inference time:43.662127ms
+Image show time:2.214563ms
+FPS: 5
+capture time:131.875515ms
+inference time:41.892776ms
+Image show time:0.568131ms
+FPS: 5
+capture time:139.842175ms
+inference time:41.237396ms
+Image show time:1.885727ms
+FPS: 5
+capture time:131.236259ms
+inference time:40.946351ms
+Image show time:2.147354ms
+FPS: 5
+capture time:134.613709ms
+inference time:44.626678ms
+Image show time:2.184188ms
+FPS: 5
+capture time:125.693498ms
+inference time:46.821908ms
+Image show time:2.071145ms
+FPS: 5
+capture time:117.968591ms
+inference time:46.979868ms
+Image show time:0.677507ms
+FPS: 5
+capture time:119.408771ms
+inference time:47.674540ms
+Image show time:0.570505ms
+FPS: 5
+capture time:120.753659ms
+inference time:46.935367ms
+Image show time:0.670798ms
+FPS: 5
+capture time:119.230686ms
+inference time:48.744426ms
+Image show time:0.684299ms
+FPS: 5
+capture time:119.272686ms
+inference time:41.769359ms
+Image show time:1.878060ms
+FPS: 5
+capture time:137.522153ms
+inference time:41.980861ms
+Image show time:0.567755ms
+FPS: 5
+capture time:125.928250ms
+inference time:40.809975ms
+Image show time:2.155020ms
+FPS: 5
+capture time:134.689084ms
+inference time:43.856838ms
+Image show time:2.195271ms
+FPS: 5
+capture time:127.938186ms
+inference time:42.405490ms
+Image show time:2.115312ms
+FPS: 5
+capture time:122.268131ms
+inference time:43.874588ms
+Image show time:2.147312ms
+FPS: 5
+capture time:123.412851ms
+inference time:41.112103ms
+Image show time:2.324939ms
+FPS: 5
+capture time:135.285756ms
+inference time:43.725920ms
+Image show time:2.210688ms
+FPS: 5
+capture time:123.521393ms
+inference time:43.749878ms
+Image show time:2.226897ms
+FPS: 5
+capture time:123.477601ms
+inference time:44.548094ms
+Image show time:0.599548ms
+FPS: 5
+capture time:125.141784ms
+inference time:44.642720ms
+Image show time:1.973560ms
+FPS: 5
+capture time:121.574125ms
+inference time:46.827866ms
+Image show time:2.074937ms
+FPS: 5
+capture time:121.759709ms
+inference time:48.698758ms
+Image show time:0.572713ms
+FPS: 5
+capture time:119.427813ms
+inference time:47.096243ms
+Image show time:0.579005ms
+FPS: 5
+capture time:119.032809ms
+inference time:48.757427ms
+Image show time:1.846851ms
+FPS: 5
+capture time:121.710168ms
+inference time:47.078285ms
+Image show time:3.626910ms
+FPS: 5
+capture time:117.772505ms
+inference time:46.142859ms
+Image show time:1.942935ms
+FPS: 5
+capture time:121.699167ms
+inference time:41.119936ms
+Image show time:1.853310ms
+FPS: 5
+capture time:138.113284ms
+inference time:43.313166ms
+Image show time:1.956477ms
+FPS: 5
+capture time:123.988814ms
+inference time:48.717009ms
+Image show time:2.137146ms
+FPS: 5
+capture time:121.072953ms
+inference time:46.052276ms
+Image show time:1.949685ms
+FPS: 5
+capture time:125.481621ms
+inference time:45.984900ms
+Image show time:1.961477ms
+FPS: 5
+capture time:123.179431ms
+inference time:46.086025ms
+Image show time:3.816911ms
+FPS: 5
+capture time:121.064620ms
+inference time:47.260537ms
+Image show time:0.573631ms
+FPS: 5
+capture time:121.453373ms
+inference time:47.306870ms
+Image show time:0.571672ms
+FPS: 5
+capture time:119.258561ms
+inference time:46.072692ms
+Image show time:1.944894ms
+FPS: 5
+capture time:121.520166ms
+inference time:47.133036ms
+Image show time:0.564630ms
+FPS: 5
+capture time:123.262599ms
+inference time:48.729717ms
+Image show time:0.685715ms
+FPS: 5
+capture time:119.362520ms
+inference time:46.880699ms
+Image show time:0.601215ms
+FPS: 5
+capture time:119.487063ms
+inference time:49.840395ms
+Image show time:0.572422ms
+FPS: 5
+capture time:120.340488ms
+inference time:44.859972ms
+Image show time:0.564714ms
+FPS: 5
+capture time:129.076863ms
+inference time:47.379122ms
+Image show time:0.568506ms
+FPS: 5
+capture time:119.050767ms
+inference time:46.893033ms
+Image show time:4.004455ms
+FPS: 5
+capture time:122.562926ms
+inference time:41.435106ms
+Image show time:1.865143ms
+FPS: 5
+capture time:133.679866ms
+inference time:42.730202ms
+Image show time:0.568464ms
+FPS: 5
+capture time:124.983033ms
+inference time:43.611543ms
+Image show time:2.222729ms
+FPS: 5
+capture time:127.519640ms
+inference time:41.248688ms
+Image show time:2.129937ms
+FPS: 5
+capture time:134.634584ms
+inference time:43.793754ms
+Image show time:2.134103ms
+FPS: 5
+capture time:127.452807ms
+inference time:42.841536ms
+Image show time:0.579131ms
+FPS: 5
+capture time:124.924074ms
+inference time:42.036445ms
+Image show time:0.563672ms
+FPS: 5
+capture time:127.186095ms
+inference time:42.003111ms
+Image show time:0.571089ms
+FPS: 5
+capture time:131.147509ms
+inference time:45.672063ms
+Image show time:0.566006ms
+FPS: 4
+capture time:120.926702ms
+inference time:48.744343ms
+Image show time:0.692174ms
+FPS: 5
+capture time:119.362395ms
+inference time:46.798491ms
+Image show time:0.598130ms
+FPS: 5
+capture time:123.355267ms
+inference time:46.972743ms
+Image show time:0.698090ms
+FPS: 5
+capture time:119.284977ms
+inference time:46.851616ms
+Image show time:0.597631ms
+FPS: 5
+capture time:119.452105ms
+inference time:41.064228ms
+Image show time:1.825851ms
+FPS: 5
+capture time:138.381536ms
+inference time:42.895704ms
+Image show time:0.563255ms
+FPS: 5
+capture time:124.651154ms
+inference time:43.628377ms
+Image show time:2.199854ms
+FPS: 5
+capture time:123.789354ms
+inference time:40.974268ms
+Image show time:2.134020ms
+FPS: 5
+capture time:135.456300ms
+inference time:42.462407ms
+Image show time:2.368565ms
+FPS: 5
+capture time:121.815502ms
+inference time:41.031143ms
+Image show time:2.145979ms
+FPS: 5
+capture time:134.821502ms
+inference time:41.106520ms
+Image show time:2.122145ms
+FPS: 5
+capture time:135.373215ms
+inference time:42.808619ms
+Image show time:0.567380ms
+FPS: 5
+capture time:123.787105ms
+inference time:44.967265ms
+Image show time:0.562422ms
+FPS: 5
+capture time:123.400559ms
+inference time:46.751115ms
+Image show time:0.586506ms
+FPS: 5
+capture time:123.273891ms
+inference time:46.950076ms
+Image show time:0.608214ms
+FPS: 5
+capture time:119.362771ms
+inference time:41.463357ms
+Image show time:1.848559ms
+FPS: 5
+capture time:131.006591ms
+inference time:44.572511ms
+Image show time:0.602256ms
+FPS: 5
+capture time:125.111034ms
+inference time:45.251392ms
+Image show time:0.566756ms
+FPS: 5
+capture time:123.006430ms
+inference time:41.159770ms
+Image show time:1.867185ms
+FPS: 5
+capture time:138.304327ms
+inference time:39.617505ms
+Image show time:0.642756ms
+FPS: 5
+capture time:137.803864ms
+inference time:40.022551ms
+Image show time:2.223688ms
+FPS: 5
+capture time:135.886803ms
+inference time:40.756849ms
+Image show time:2.147229ms
+FPS: 5
+capture time:138.762373ms
+inference time:44.605220ms
+Image show time:0.600756ms
+FPS: 4
+capture time:121.085120ms
+inference time:39.920799ms
+Image show time:2.139104ms
+FPS: 5
+capture time:135.863720ms
+inference time:40.746099ms
+Image show time:2.145687ms
+FPS: 5
+capture time:138.766498ms
+inference time:45.067224ms
+Image show time:0.575547ms
+FPS: 4
+capture time:122.861720ms
+inference time:47.145828ms
+Image show time:2.049228ms
+FPS: 5
+capture time:117.784589ms
+inference time:41.363438ms
+Image show time:1.883560ms
+FPS: 5
+capture time:133.938535ms
+inference time:40.269637ms
+Image show time:0.570298ms
+FPS: 5
+capture time:124.074232ms
+inference time:40.971559ms
+Image show time:2.132770ms
+FPS: 5
+capture time:134.534166ms
+inference time:45.254892ms
+Image show time:0.853883ms
+FPS: 5
+capture time:132.352311ms
+inference time:46.851658ms
+Image show time:0.586881ms
+FPS: 5
+capture time:119.440854ms
+inference time:47.487956ms
+Image show time:1.985477ms
+FPS: 5
+capture time:117.228125ms
+inference time:46.856699ms
+Image show time:0.637465ms
+FPS: 5
+capture time:123.204723ms
+inference time:41.468648ms
+Image show time:1.861893ms
+FPS: 5
+capture time:134.055203ms
+inference time:39.800882ms
+Image show time:2.140770ms
+FPS: 5
+capture time:135.931804ms
+inference time:40.162052ms
+Image show time:2.141021ms
+FPS: 5
+capture time:139.789299ms
+inference time:40.875726ms
+Image show time:2.148104ms
+FPS: 5
+capture time:131.120466ms
+inference time:40.944143ms
+Image show time:2.121729ms
+FPS: 5
+capture time:135.637718ms
+inference time:42.023195ms
+Image show time:1.879018ms
+FPS: 5
+capture time:129.260990ms
+inference time:39.641089ms
+Image show time:2.214230ms
+FPS: 5
+capture time:135.904762ms
+inference time:42.087028ms
+Image show time:1.884018ms
+FPS: 5
+capture time:134.087662ms
+inference time:42.046196ms
+Image show time:0.573631ms
+FPS: 5
+capture time:130.792338ms
+inference time:44.090756ms
+Image show time:0.575339ms
+FPS: 5
+capture time:130.310709ms
+inference time:39.744715ms
+Image show time:2.214272ms
+FPS: 5
+capture time:139.856633ms
+inference time:44.152465ms
+Image show time:0.567798ms
+FPS: 4
+capture time:130.285708ms
+inference time:46.005650ms
+Image show time:0.573464ms
+FPS: 5
+capture time:120.226903ms
+inference time:45.314643ms
+Image show time:0.566131ms
+FPS: 5
+capture time:132.459146ms
+inference time:44.426509ms
+Image show time:0.649506ms
+FPS: 5
+capture time:130.133123ms
+inference time:44.086339ms
+Image show time:0.711465ms
+FPS: 5
+capture time:130.341876ms
+inference time:39.784715ms
+Image show time:2.148396ms
+FPS: 5
+capture time:139.845466ms
+inference time:43.069830ms
+Image show time:1.962019ms
+FPS: 5
+capture time:122.974555ms
+inference time:40.139426ms
+Image show time:2.142020ms
+FPS: 5
+capture time:135.875887ms
+inference time:40.978685ms
+Image show time:2.155646ms
+FPS: 5
+capture time:138.265618ms
+inference time:39.738298ms
+Image show time:2.052061ms
+FPS: 5
+capture time:136.707770ms
+inference time:44.981015ms
+Image show time:1.875601ms
+FPS: 5
+capture time:120.843785ms
+inference time:41.352730ms
+Image show time:1.879059ms
+FPS: 5
+capture time:137.918073ms
+inference time:41.293146ms
+Image show time:1.674975ms
+FPS: 5
+capture time:131.411719ms
+inference time:44.045756ms
+Image show time:0.574088ms
+FPS: 5
+capture time:130.372751ms
+inference time:39.701465ms
+Image show time:2.232229ms
+FPS: 5
+capture time:139.857717ms
+inference time:40.195511ms
+Image show time:2.132563ms
+FPS: 5
+capture time:135.766261ms
+inference time:45.675313ms
+Image show time:1.942143ms
+FPS: 5
+capture time:123.078806ms
+inference time:41.680566ms
+Image show time:1.958519ms
+FPS: 5
+capture time:130.476002ms
+inference time:40.013842ms
+Image show time:2.133770ms
+FPS: 5
+capture time:135.835762ms
+inference time:44.762054ms
+Image show time:1.834684ms
+FPS: 5
+capture time:125.443954ms
+inference time:46.842407ms
+Image show time:0.601964ms
+FPS: 5
+capture time:119.489771ms
+inference time:42.366740ms
+Image show time:1.934602ms
+FPS: 5
+capture time:129.525160ms
+inference time:40.440263ms
+Image show time:2.229646ms
+FPS: 5
+capture time:139.170419ms
+inference time:40.095301ms
+Image show time:1.975061ms
+FPS: 5
+capture time:135.421425ms
+inference time:44.027381ms
+Image show time:2.132062ms
+FPS: 5
+capture time:131.374803ms
+inference time:41.163603ms
+Image show time:1.862810ms
+FPS: 5
+capture time:130.054289ms
+inference time:40.111552ms
+Image show time:0.578256ms
+FPS: 5
+capture time:126.410380ms
+inference time:44.978557ms
+Image show time:0.563089ms
+FPS: 5
+capture time:123.056556ms
+inference time:42.876245ms
+Image show time:1.953102ms
+FPS: 5
+capture time:119.825067ms
+inference time:46.940200ms
+Image show time:0.574130ms
+FPS: 4
+capture time:115.807944ms
+inference time:41.209520ms
+Image show time:0.565297ms
+FPS: 5

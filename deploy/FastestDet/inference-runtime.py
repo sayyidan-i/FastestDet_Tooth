@@ -137,7 +137,7 @@ def display_image(image_path):
 if __name__ == '__main__':
     # source
     parser = argparse.ArgumentParser()
-    parser.add_argument('--weight', type=str, default="weight\FastestDet_352_AP4.5.onnx")
+    parser.add_argument('--weight', type=str, default="weight/FastestDet_160_AP2.6.onnx")
     opt = parser.parse_args()
     assert os.path.exists(opt.weight)
     
@@ -162,12 +162,13 @@ if __name__ == '__main__':
         "Lain-Lain": (128, 128, 128)
     }
     
+    input_width, input_height = 160, 160
+    
     for i in range(1, 13):
         source = f"image/inferensi ({i}).jpg"       
         img = cv2.imread(source)
         # img = imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
         # Model input width and height
-        input_width, input_height = 352, 352
         # Load model
         session = onnxruntime.InferenceSession(model_onnx)
         # Object detection
