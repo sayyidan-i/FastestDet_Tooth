@@ -108,11 +108,11 @@ def main():
     args = parser.parse_args()
     
     # Load model
-    model = ONNXDetect(args, onnx_path='weights\yolov8_160_0.29.onnx')
+    model = ONNXDetect(args, onnx_path='weights/yolov8_352_0.5.onnx')
     
     for i in range(1, 13):
         input_file = f'image/inferensi ({i}).jpg'
-        output_file = f'inference time/inferensi ({i})_yolov8_160.jpg'
+        output_file = f'inference time/inferensi ({i})_yolov8_352.jpg'
         
         frame = cv2.imread(input_file)
         image = frame.copy()
