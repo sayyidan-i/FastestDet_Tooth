@@ -108,7 +108,7 @@ def export(args):
     import torch  # noqa
     import onnxsim  # noqa
 
-    filename = 'weights\yolov8_160.pt'
+    filename = 'weights\\yolov8_160_0.29.pt'
 
     model = torch.load(filename,map_location=torch.device('cpu'))['model'].float()
     image = torch.zeros((1, 3, args.input_size, args.input_size))

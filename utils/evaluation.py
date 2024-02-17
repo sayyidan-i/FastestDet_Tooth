@@ -54,8 +54,11 @@ class CocoDetectionEvaluator():
         coco_eval = COCOeval(coco_gt, coco_pred, "bbox")
         coco_eval.evaluate()
         coco_eval.accumulate()
+        print(coco_eval.eval)  
+    
         coco_eval.summarize()
         mAP05 = coco_eval.stats[1]
+        print(coco_eval.stats)
         return mAP05
 
     def compute_map(self, val_dataloader, model):

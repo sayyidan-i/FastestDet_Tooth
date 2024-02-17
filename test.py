@@ -13,9 +13,9 @@ if __name__ == '__main__':
     # 指定训练配置文件
     parser = argparse.ArgumentParser()
     parser.add_argument('--yaml', type=str, default="tooth.yaml", help='.yaml config')
-    parser.add_argument('--weight', type=str, default="weights/FastestDet_160_Final.pth", help='.weight config')
-    parser.add_argument('--img', type=str, default='karies gigi.jpg', help='The path of test image')
-    parser.add_argument('--thresh', type=float, default=0.5, help='The path of test image')
+    parser.add_argument('--weight', type=str, default="checkpoint/weight_AP05_0.450766_230-epoch.pth", help='.weight config')
+    parser.add_argument('--img', type=str, default='foto5092-3230.jpg', help='The path of test image')
+    parser.add_argument('--thresh', type=float, default=0.6, help='The path of test image')
     parser.add_argument('--onnx', action="store_true", default=False, help='Export onnx file')
     parser.add_argument('--torchscript', action="store_true", default=False, help='Export torchscript file')
     parser.add_argument('--cpu', action="store_true", default="cpu", help='Run on cpu')
@@ -76,7 +76,7 @@ if __name__ == '__main__':
         model_cpu = copy.deepcopy(model).cpu()
         x = torch.rand(1, 3, cfg.input_height, cfg.input_width)
         mod = torch.jit.trace(model_cpu, x)
-        mod.save("./FastestDet.pt")
+        mod.save("./FastestDet_352_Final.pt")
         print("to convert torchscript to pnnx/ncnn: ./pnnx FastestDet.pt inputshape=[1,3,%d,%d]" % (cfg.input_height, cfg.input_height))
 
     # 模型推理
@@ -113,4 +113,4 @@ if __name__ == '__main__':
         cv2.putText(ori_img, '%.2f' % obj_score, (x1, y1 - 5), 0, 0.7, (0, 255, 0), 2)	
         cv2.putText(ori_img, category, (x1, y1 - 25), 0, 0.7, (0, 255, 0), 2)
 
-    cv2.imwrite("karies.png", ori_img)
+    cv2.imwrite("result_foto5092-3230.png", ori_img)

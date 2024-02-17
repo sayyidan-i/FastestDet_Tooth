@@ -1,6 +1,6 @@
 DATASET:
-  TRAIN: "../Dataset/Yolo/train_lokal.txt"
-  VAL: "../Dataset/Yolo/val_lokal.txt"
+  TRAIN: "../skripsi/Dataset/Yolo/train_lokal.txt"
+  VAL: "../skripsi/Dataset/Yolo/val_lokal.txt"
   NAMES: "configs/tooth.names"
 MODEL:
   NC: 7

@@ -137,18 +137,18 @@ def display_image(image_path):
 if __name__ == '__main__':
     # source
     parser = argparse.ArgumentParser()
-    parser.add_argument('--img', type=str, default="karies gigi.jpg")
+    parser.add_argument('--img', type=str, default="foto5092-3230.jpg")
     opt = parser.parse_args()
     assert os.path.exists(opt.img)
     source = opt.img
-    model_onnx = 'weight/FastestDet_160_AP2.6.onnx'
+    model_onnx = 'weight/epoch230.onnx'
     label = "tooth.names"
-    thresh = 0.5
+    thresh = 0.6
     
     img = cv2.imread(source)
     #img =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
     # 模型输入的宽高
-    input_width, input_height = 160, 160
+    input_width, input_height = 352, 352
     # 加载模型
     session = onnxruntime.InferenceSession(model_onnx)
     # 目标检测
@@ -195,10 +195,10 @@ if __name__ == '__main__':
         else:  # Jika objek berada di bagian bawah gambar
             text_y = y1 - 5 - 20  # Tempatkan teks di atas objek
 
-        #cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.7, color, 2)
-        #cv2.putText(img, label, (x1, text_y - 20), 0, 0.7, color, 2)
+        cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.7, color, 2)
+        cv2.putText(img, label, (x1, text_y - 20), 0, 0.7, color, 2)
 
-    cv2.imwrite(f"result_{source}_160", img)
+    cv2.imwrite(f"result_{source}", img)
     display_image(f"result_{source}")
     
 
