@@ -21,7 +21,7 @@ class ONNXDetect:
 
         self.inputs = self.session.get_inputs()[0]
         self.confidence_threshold = 0.25
-        self.iou_threshold = 0.7
+        self.iou_threshold = 0.6
         self.input_size = input_size
         shape = (1, 3, self.input_size, self.input_size)
         image = numpy.zeros(shape, dtype='float32')
