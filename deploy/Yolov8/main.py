@@ -108,7 +108,7 @@ def export(args):
     import torch  # noqa
     import onnxsim  # noqa
 
-    filename = 'weights\\yolov8_160_0.29.pt'
+    filename = 'weights\\yolov8_352_0.5.pt'
 
     model = torch.load(filename,map_location=torch.device('cpu'))['model'].float()
     image = torch.zeros((1, 3, args.input_size, args.input_size))
@@ -135,7 +135,7 @@ def export(args):
 
 def test(args):
     # Load model
-    model = ONNXDetect(args, onnx_path='./weights/yolov8_352.onnx')
+    model = ONNXDetect(args, onnx_path='weights\yolov8_160_0.29.onnx')
 
     frame = cv2.imread('karies gigi.jpg')
     image = frame.copy()
@@ -148,7 +148,7 @@ def test(args):
     for output in outputs:
         x, y, w, h, score, index = output
         cv2.rectangle(frame, (int(x), int(y)), (int(x + w), int(y + h)), (0, 255, 0), 2)
-    cv2.imwrite('karies gigi yolov8 352.jpg', frame)
+    cv2.imwrite('karies gigi yolov8 160.jpg', frame)
 
 
 def main():
