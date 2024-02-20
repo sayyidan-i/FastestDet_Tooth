@@ -180,13 +180,17 @@ if __name__ == '__main__':
     date_time_str = current_datetime.strftime("%d%m%Y_%H%M")
     os.makedirs(f"result/{date_time_str}", exist_ok=True)
     
+    #iteration var
+    i=0
+    
            
     while loop:
+        i= i+1
         start_cap = time.perf_counter()
         ret, img = source.read()
         end_cap = time.perf_counter()
         time_cap = (end_cap - start_cap) * 1000.
-        print("capture time:%fms"%time_cap)
+        #print("capture time:%fms"%time_cap)
         
        
         # Resize image without changing resolution
@@ -200,7 +204,7 @@ if __name__ == '__main__':
         bboxes = detection(session, img_resized, input_width, input_height, thresh)
         end_inf = time.perf_counter()
         time_inf = (end_inf - start_inf) * 1000.
-        print("inference time:%fms"%time_inf)
+        #print("inference time:%fms"%time_inf)
 
         if bboxes is not None:
             #print("=================box info===================")
@@ -243,11 +247,16 @@ if __name__ == '__main__':
         cv2.imshow(window_name, img_resized)
         end_show = time.perf_counter()
         time_show = (end_show - start_show) * 1000.
-        print("Image show time:%fms"%time_show)
+        #print("Image show time:%fms"%time_show)
         print(f"FPS: {fps}")
         
         #if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
             #capture_image(img_resized)  
+            
+        print(f"iteration: {i}")
+        
+        if i == 150:
+            break
         
         if cv2.waitKey(1) == 27:
             break

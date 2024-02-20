@@ -136,12 +136,16 @@ if __name__ == "__main__":
     start_time = time.time()
     frame_counter = 0
     
+    #var for iteration
+    i=0
+    
     while True:
+        i=i+1
         start_cap = time.perf_counter()
         ret, frame = source.read()
         end_cap = time.perf_counter()
         time_cap = (end_cap - start_cap) * 1000.
-        print("capture time:%fms"%time_cap)
+        #print("capture time:%fms"%time_cap)
         if not ret:
             print("Can't receive frame")
             break
@@ -151,7 +155,7 @@ if __name__ == "__main__":
         outputs = model(image)
         end_inf = time.perf_counter()
         time_inf = (end_inf - start_inf) * 1000.
-        print("inference time:%fms"%time_inf)
+        #print("inference time:%fms"%time_inf)
         
 
         for output in outputs:
@@ -191,7 +195,12 @@ if __name__ == "__main__":
         cv2.imshow('Real-time Detection', frame)
         end_dis = time.perf_counter()
         time_dis = (end_dis- start_dis) * 1000.
-        print("frame show time:%fms"%time_dis)
+        #print("frame show time:%fms"%time_dis)
+        
+        print(f"iteration: {i}")
+        
+        if i == 150:
+            break
         
         
         if cv2.waitKey(1) == ord('q'):
