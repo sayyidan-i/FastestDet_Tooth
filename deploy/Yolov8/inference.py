@@ -20,7 +20,7 @@ class ONNXDetect:
                                             providers=['CUDAExecutionProvider'])
 
         self.inputs = self.session.get_inputs()[0]
-        self.confidence_threshold = 0.25
+        self.confidence_threshold = 0.5
         self.iou_threshold = 0.6
         self.input_size = args.input_size
         shape = (1, 3, self.input_size, self.input_size)
@@ -104,15 +104,15 @@ class ONNXDetect:
 
 def main():
     parser = ArgumentParser()
-    parser.add_argument('--input-size', default=160, type=int)
+    parser.add_argument('--input-size', default=352, type=int)
     args = parser.parse_args()
     
     # Load model
-    model = ONNXDetect(args, onnx_path='weights/yolov8_160_0.29.onnx')
+    model = ONNXDetect(args, onnx_path='weights\yolov8_352_0.5.onnx')
     
     for i in range(1, 13):
-        input_file = f'image/inferensi ({i}).jpg'
-        output_file = f'inference time/inferensi ({i})_yolov8_160.jpg'
+        input_file = f'image\\tes2.png'
+        output_file = f'inference time/test2.jpg'
         
         frame = cv2.imread(input_file)
         image = frame.copy()

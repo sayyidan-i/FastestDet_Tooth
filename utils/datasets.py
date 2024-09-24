@@ -7,7 +7,7 @@ import random
 
 def random_crop(image, boxes):
     height, width, _ = image.shape
-    # random crop imgage
+    # random crop image
     cw, ch = random.randint(int(width * 0.75), width), random.randint(int(height * 0.75), height)
     cx, cy = random.randint(0, width - cw), random.randint(0, height - ch)
 

@@ -182,8 +182,6 @@ if __name__ == '__main__':
     
     #iteration var
     i=0
-    
-           
     while loop:
         i= i+1
         start_cap = time.perf_counter()
@@ -191,17 +189,11 @@ if __name__ == '__main__':
         end_cap = time.perf_counter()
         time_cap = (end_cap - start_cap) * 1000.
         #print("capture time:%fms"%time_cap)
-        
-       
-        # Resize image without changing resolution
-        img_resized = img
-        #img_resized =  imutils.resize(img, width=640, height=640, inter=cv2.INTER_NEAREST)
-        #img_resized = cv2.resize(img, (352, 352), interpolation=cv2.INTER_AREA)
-        
+
         input_width, input_height = 352, 352
         
         start_inf = time.perf_counter()
-        bboxes = detection(session, img_resized, input_width, input_height, thresh)
+        bboxes = detection(session, img, input_width, input_height, thresh)
         end_inf = time.perf_counter()
         time_inf = (end_inf - start_inf) * 1000.
         #print("inference time:%fms"%time_inf)
@@ -218,19 +210,19 @@ if __name__ == '__main__':
                 color = label_colors.get(label, (255, 255, 255))  # Use white if label not found
 
                 # Modify detection to use the specified color
-                cv2.rectangle(img_resized, (x1, y1), (x2, y2), color, 2)
+                cv2.rectangle(img, (x1, y1), (x2, y2), color, 2)
 
                 # Determine text label coordinates
                 text_y = y1 - 5 if y1 >= 5 else y1 + 20  # Shift text downwards if close to top boundary
-                if y1 < img_resized.shape[0] // 2:  # If the object is in the upper part of the image
+                if y1 < img.shape[0] // 2:  # If the object is in the upper part of the image
                     text_y = y2 + 20  # Place the text below the object
                 else:  # If the object is in the lower part of the image
                     text_y = y1 - 5 - 20  # Place the text above the object
 
-                cv2.putText(img_resized, '%.2f' % obj_score, (x1, text_y), 0, 0.5, color, 1)
-                cv2.putText(img_resized, label, (x1, text_y - 20), 0, 0.5, color, 1)
+                cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.5, color, 1)
+                cv2.putText(img, label, (x1, text_y - 20), 0, 0.5, color, 1)
         else:
-            cv2.putText(img_resized, "Correct the camera direction", (200,430), 0, 0.5, (0, 255, 255), 1)
+            cv2.putText(img, "Correct the camera direction", (200,430), 0, 0.5, (0, 255, 255), 1)
         
         # Calculate FPS
         new_frame_time = time.time()
@@ -240,23 +232,23 @@ if __name__ == '__main__':
         fps = str(int(fps))
 
         # Display FPS on the screen
-        cv2.putText(img_resized, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        cv2.putText(img, f"FPS: {fps}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
         
         # Display the image
         start_show = time.perf_counter()
-        cv2.imshow(window_name, img_resized)
+        cv2.imshow(window_name, img)
         end_show = time.perf_counter()
         time_show = (end_show - start_show) * 1000.
         #print("Image show time:%fms"%time_show)
         print(f"FPS: {fps}")
         
         #if cv2.waitKey(1) == ord('c'):  # Tekan 'c' untuk capture gambar
-            #capture_image(img_resized)  
+            #capture_image(img)  
             
-        print(f"iteration: {i}")
+        #print(f"iteration: {i}")
         
-        if i == 150:
-            break
+        #if i == 150:
+        #    break
         
         if cv2.waitKey(1) == 27:
             break

@@ -14,11 +14,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--yaml', type=str, default="tooth.yaml", help='.yaml config')
     parser.add_argument('--weight', type=str, default="checkpoint/weight_AP05_0.450766_230-epoch.pth", help='.weight config')
-    parser.add_argument('--img', type=str, default='foto5092-3230.jpg', help='The path of test image')
+    parser.add_argument('--img', type=str, default='img\inferensi (4).jpg', help='The path of test image')
     parser.add_argument('--thresh', type=float, default=0.6, help='The path of test image')
     parser.add_argument('--onnx', action="store_true", default=False, help='Export onnx file')
     parser.add_argument('--torchscript', action="store_true", default=False, help='Export torchscript file')
-    parser.add_argument('--cpu', action="store_true", default="cpu", help='Run on cpu')
+    parser.add_argument('--cpu', action="store_true", default="pu", help='Run on cpu')
 
     opt = parser.parse_args()
     assert os.path.exists(opt.yaml), "请指定正确的配置文件路径"
@@ -113,4 +113,5 @@ if __name__ == '__main__':
         cv2.putText(ori_img, '%.2f' % obj_score, (x1, y1 - 5), 0, 0.7, (0, 255, 0), 2)	
         cv2.putText(ori_img, category, (x1, y1 - 25), 0, 0.7, (0, 255, 0), 2)
 
-    cv2.imwrite("result_foto5092-3230.png", ori_img)
+    cv2.putText(ori_img, 'Forward Time: %.2fms' % time, (20, 50), 0, 2, (0, 255, 0), 2)
+    cv2.imwrite("result/inferensi(4)_result.png", ori_img)

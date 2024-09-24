@@ -57,25 +57,26 @@ class EMA():
                 param.data = self.backup[name]
         self.backup = {}
 
-# 后处理(归一化后的坐标)
+# Post-processing (normalized coordinates)
 def handle_preds(preds, device, conf_thresh=0.25, nms_thresh=0.45):
     total_bboxes, output_bboxes  = [], []
-    # 将特征图转换为检测框的坐标
+    # Convert feature maps to bounding box coordinates
     N, C, H, W = preds.shape
     bboxes = torch.zeros((N, H, W, 6))
     pred = preds.permute(0, 2, 3, 1)
-    # 前背景分类分支
+    # Foreground-background classification branch
     pobj = pred[:, :, :, 0].unsqueeze(dim=-1)
-    # 检测框回归分支
+    # Bounding box regression branch
     preg = pred[:, :, :, 1:5]
-    # 目标类别分类分支
+    # Target class classification branch
     pcls = pred[:, :, :, 5:]
 
-    # 检测框置信度
+    # Bounding box confidence
     bboxes[..., 4] = (pobj.squeeze(-1) ** 0.6) * (pcls.max(dim=-1)[0] ** 0.4)
     bboxes[..., 5] = pcls.argmax(dim=-1)
 
-    # 检测框的坐标
+    # Coordinate of the bounding boxes
+    
     gy, gx = torch.meshgrid([torch.arange(H), torch.arange(W)])
     bw, bh = preg[..., 2].sigmoid(), preg[..., 3].sigmoid() 
     bcx = (preg[..., 0].tanh() + gx.to(device)) / W

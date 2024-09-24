@@ -1,11 +1,7 @@
 import cv2
-import time
 import numpy as np
 import onnxruntime
-import screeninfo
-import argparse
-import os
-import imutils
+
 
 # sigmoid函数
 def sigmoid(x):
@@ -137,11 +133,11 @@ def display_image(image_path):
 if __name__ == '__main__':
     # source
     parser = argparse.ArgumentParser()
-    parser.add_argument('--img', type=str, default="foto5092-3230.jpg")
+    parser.add_argument('--img', type=str, default="image\\tes2.png")
     opt = parser.parse_args()
     assert os.path.exists(opt.img)
     source = opt.img
-    model_onnx = 'weight/epoch230.onnx'
+    model_onnx = 'weight\FastestDet_352_AP4.5.onnx'
     label = "tooth.names"
     thresh = 0.6
     
@@ -198,8 +194,7 @@ if __name__ == '__main__':
         cv2.putText(img, '%.2f' % obj_score, (x1, text_y), 0, 0.7, color, 2)
         cv2.putText(img, label, (x1, text_y - 20), 0, 0.7, color, 2)
 
-    cv2.imwrite(f"result_{source}", img)
-    display_image(f"result_{source}")
+    cv2.imwrite(f"result.jpg", img)
     
 
 

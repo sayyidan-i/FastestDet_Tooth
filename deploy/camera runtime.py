@@ -24,9 +24,6 @@ if __name__ == '__main__':
         time_cap = (end_cap - start_cap) * 1000.
         print("capture time:%fms"%time_cap)
         
-        # Resize the image to 640x640
-        #img = cv2.resize(img, (640, 640))
-        
         # Calculate FPS
         new_frame_time = time.time()
         fps = 1 / (new_frame_time - prev_frame_time)

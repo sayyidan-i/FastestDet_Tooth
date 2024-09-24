@@ -162,7 +162,7 @@ if __name__ == '__main__':
         "Lain-Lain": (128, 128, 128)
     }
     
-    input_width, input_height = 160, 160
+    input_width, input_height = 352, 352
     
     for i in range(1, 13):
         source = f"image/inferensi ({i}).jpg"       
