@@ -1,9 +1,4 @@
 
-# :zap:FastestDet for Tooth:zap:
-[![DOI](https://zenodo.org/badge/508635170.svg)](https://zenodo.org/badge/latestdoi/508635170)
-![Static Badge](https://img.shields.io/badge/Original%20Source-Github--Dog%20Qiuqiu-orange?link=https%3A%2F%2Fgithub.com%2Fdog-qiuqiu%2FFastestDet)
-![image](https://img.shields.io/github/license/dog-qiuqiu/FastestDet)
-
 # Implementation of Object Detection on Embedded Devices for Dental Health Monitoring using FastestDet and YOLOv8n
 
 ## Overview
